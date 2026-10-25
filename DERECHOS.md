@@ -10,7 +10,7 @@ Atribución sugerida: «Caudal, de Néstor Fernando De León Llanos, v0.1.0, htt
 
 La licencia cubre los derechos que corresponden al autor sobre sus aportes. No relicencia textos literarios de otros autores, traducciones de terceros, artículos, fotografías, reproducciones históricas, datos, marcas, logotipos ni materiales estudiantiles. Los textos de dominio público conservan ese régimen. Las fuentes con licencias propias conservan sus condiciones y créditos, incluso cuando integran un material compuesto.
 
-Los libros completos se conservan en el archivo de investigación de acceso restringido con sus créditos originales. La licencia de este repositorio no concede autorización para redistribuir las obras protegidas que aparecen en esos libros. Las menciones institucionales identifican el contexto educativo y no declaran un aval universitario o institucional a esta publicación.
+Los libros completos están disponibles como PDF originales en la publicación del proyecto y conservan sus créditos. El archivo de investigación mantiene además las fuentes de producción. La licencia de este repositorio no concede derechos adicionales sobre las obras protegidas que aparecen en esos libros. Las menciones institucionales identifican el contexto educativo y no declaran un aval universitario o institucional a esta publicación.
 
 ## Ilustraciones y tipografías
 

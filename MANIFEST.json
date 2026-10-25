@@ -10,8 +10,8 @@
     },
     {
       "archivo": "CHANGELOG.md",
-      "bytes": 467,
-      "sha256": "813098772cc51b90562c1f33ce09580b80ebfd5dc0a51535a03f3e6dafcf0742"
+      "bytes": 831,
+      "sha256": "6fdf9ca996d373141d77ae77715615e0e0c8d16a9e6aeab0b3a3aecd3fec8fcd"
     },
     {
       "archivo": "CITATION.cff",
@@ -20,8 +20,8 @@
     },
     {
       "archivo": "DERECHOS.md",
-      "bytes": 2358,
-      "sha256": "97bf114ebc1260f685bdedb5efd8656b5cf37e36cf5dafb11bbfde6594532ca5"
+      "bytes": 2428,
+      "sha256": "daf0bae1a7bb8463a66f2837cb27fa4b45c62c84be1bcb707ca06bf17c1511b6"
     },
     {
       "archivo": "LICENSE",
@@ -30,23 +30,38 @@
     },
     {
       "archivo": "README.md",
-      "bytes": 3709,
-      "sha256": "6e2e7b206604874951cfa1e0302a183cf5a461efd78d4f67d41a2656c0bc335d"
+      "bytes": 9544,
+      "sha256": "a912ce6e0a7808a624ebbc72c356343addf64d7de2e9e15a5ac201d26fc83530"
     },
     {
       "archivo": "docs/CATALOGO.json",
-      "bytes": 4997,
-      "sha256": "d77a6a2e7eddf9345c6cd872809b797ee90ac308a568da32645fd31e68d34f5e"
+      "bytes": 6675,
+      "sha256": "d4d8d5d783a3fbc3477326de40c0228624ee51e461d577f466cc3142a06ddd22"
     },
     {
       "archivo": "docs/CATALOGO.md",
-      "bytes": 1724,
-      "sha256": "e29c71da1fa34f568539f3ef2bd30a0aef13b3d27a6edd211863d1635c07bb53"
+      "bytes": 3258,
+      "sha256": "2321774a31096a05ed8f120b6243ba0c286bb1156f8fbabe6baa4b6dc642796b"
     },
     {
       "archivo": "docs/INVESTIGACION.md",
       "bytes": 2007,
       "sha256": "a51f366cba7bc34323ae7594bf48d1e50a311e5b70c98e05ce9a0d282c6a6beb"
+    },
+    {
+      "archivo": "docs/imagenes/caudal-10-portada.png",
+      "bytes": 576607,
+      "sha256": "feef949adea8671006428b5e1fe84f3a453421e7da48aa5addfb076d6bf54515"
+    },
+    {
+      "archivo": "docs/imagenes/caudal-11-portada.png",
+      "bytes": 322886,
+      "sha256": "6215e0c200b2224484c8fc29318dc68c5f1912f39eeb33f27f6ab276b6e141c2"
+    },
+    {
+      "archivo": "docs/imagenes/caudal-9-portada.png",
+      "bytes": 589240,
+      "sha256": "b693b3c3fd15e59f60db4bec8e75a8caaa7a112038d6eb61cc4f7eb60a7be279"
     },
     {
       "archivo": "recursos/arte-original/c10-a.png",
