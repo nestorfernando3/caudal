@@ -8,7 +8,7 @@
 
 Proyecto en curso · v0.1.0 · Barranquilla, Colombia
 
-[Libros y descargas](#libros-y-descargas) · [Recursos para el aula](#recursos-para-el-aula) · [Investigación](#un-proyecto-en-construccion) · [Licencia](DERECHOS.md)
+[Libros y descargas](#libros-y-descargas) · [Recursos para el aula](#recursos-para-el-aula) · [Investigación](#un-proyecto-en-construcción) · [Licencia](DERECHOS.md)
 
 </div>
 
