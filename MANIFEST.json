@@ -1,0 +1,502 @@
+{
+  "version": "0.1.0",
+  "fecha": "2026-10-25",
+  "estado": "proyecto-en-curso",
+  "archivos": [
+    {
+      "archivo": ".gitignore",
+      "bytes": 27,
+      "sha256": "dc0707a7d018ed90d7389d1bfece17cb6d38c214f262626f2dfcd464edb36793"
+    },
+    {
+      "archivo": "CHANGELOG.md",
+      "bytes": 467,
+      "sha256": "813098772cc51b90562c1f33ce09580b80ebfd5dc0a51535a03f3e6dafcf0742"
+    },
+    {
+      "archivo": "CITATION.cff",
+      "bytes": 728,
+      "sha256": "cae7cbd282cdfc3694a595c1b622cd31b7464ff33f5d1dc53fcb929b277d4f6a"
+    },
+    {
+      "archivo": "DERECHOS.md",
+      "bytes": 2358,
+      "sha256": "97bf114ebc1260f685bdedb5efd8656b5cf37e36cf5dafb11bbfde6594532ca5"
+    },
+    {
+      "archivo": "LICENSE",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+    },
+    {
+      "archivo": "README.md",
+      "bytes": 3709,
+      "sha256": "6e2e7b206604874951cfa1e0302a183cf5a461efd78d4f67d41a2656c0bc335d"
+    },
+    {
+      "archivo": "docs/CATALOGO.json",
+      "bytes": 4997,
+      "sha256": "d77a6a2e7eddf9345c6cd872809b797ee90ac308a568da32645fd31e68d34f5e"
+    },
+    {
+      "archivo": "docs/CATALOGO.md",
+      "bytes": 1724,
+      "sha256": "e29c71da1fa34f568539f3ef2bd30a0aef13b3d27a6edd211863d1635c07bb53"
+    },
+    {
+      "archivo": "docs/INVESTIGACION.md",
+      "bytes": 2007,
+      "sha256": "a51f366cba7bc34323ae7594bf48d1e50a311e5b70c98e05ce9a0d282c6a6beb"
+    },
+    {
+      "archivo": "recursos/arte-original/c10-a.png",
+      "bytes": 3124666,
+      "sha256": "511da0a388164821b012d0d241cfa98568e3ba1e309d25a9ae30014e4366fc1d"
+    },
+    {
+      "archivo": "recursos/arte-original/c10-b.png",
+      "bytes": 2889610,
+      "sha256": "74a7c509899082a34313430bc5366d6e093f438a569e9e196164fae4e4a59391"
+    },
+    {
+      "archivo": "recursos/arte-original/c11-a.png",
+      "bytes": 3400103,
+      "sha256": "ad2aa4bebf87dfac15ece2a79d01fb44b050545c5717f74df4e560be1eee14fb"
+    },
+    {
+      "archivo": "recursos/arte-original/c11-b.png",
+      "bytes": 2565173,
+      "sha256": "336f6c98d44c48635e7e3fb195f89f01feb6e42f8a61c4240ed06baa421ea1db"
+    },
+    {
+      "archivo": "recursos/arte-original/vineta10.png",
+      "bytes": 2749559,
+      "sha256": "8796ee562e234cae1ef2b279faf98891e63a82116ba631123b3a768838e81d86"
+    },
+    {
+      "archivo": "recursos/arte-original/vineta11.png",
+      "bytes": 2620638,
+      "sha256": "f1a9b539ae500cceaf64290d3d3b81b77229b7f3b9f68dcc8c83f952dfcb8457"
+    },
+    {
+      "archivo": "recursos/fichas/Caudal_Fichas_Imprimibles.pdf",
+      "bytes": 425088,
+      "sha256": "df3c4ebd571ef4d7ff4be6f368cd4fb80bb6b798bb17dad1505cbe55e9ad17f0"
+    },
+    {
+      "archivo": "recursos/fichas/Caudal_Fichas_Vista_general.jpg",
+      "bytes": 390556,
+      "sha256": "6dbe90ac6c5086ab635f5461e5780e2b76bca1ba7491eca68e2d77d91bd223ac"
+    },
+    {
+      "archivo": "recursos/fichas/F01_Caudal_10_Mapa_de_voces.pdf",
+      "bytes": 82867,
+      "sha256": "153eb77b6c40fc8af692cc0404f4205547e5fabf02705aac3d2826c0c6d4269a"
+    },
+    {
+      "archivo": "recursos/fichas/F01_Caudal_10_Mapa_de_voces.png",
+      "bytes": 113971,
+      "sha256": "5caf6288c11fe85969ef16382c5099c71d029e472e2a47d60cb3368fdc84d410"
+    },
+    {
+      "archivo": "recursos/fichas/F01_Caudal_10_Mapa_de_voces.svg",
+      "bytes": 1042122,
+      "sha256": "936fd7898b5d9e785cb338146db5c27a47b6223dcc2e897edf6e4918c6d786dd"
+    },
+    {
+      "archivo": "recursos/fichas/F02_Caudal_10_Una_escena_dos_versiones.pdf",
+      "bytes": 82587,
+      "sha256": "b03ef1b989a656a5b8b5e4286d823dd357208d720b13e748eb7231d9ce82bd1c"
+    },
+    {
+      "archivo": "recursos/fichas/F02_Caudal_10_Una_escena_dos_versiones.png",
+      "bytes": 121803,
+      "sha256": "46579159f1212275ae29bf5b2b44d701b3610ca7005d1d2a090be213053af586"
+    },
+    {
+      "archivo": "recursos/fichas/F02_Caudal_10_Una_escena_dos_versiones.svg",
+      "bytes": 1042006,
+      "sha256": "321319e6a81c13ae35a68fcfee39aba75cd84287d60fb704d2415839967cf7b9"
+    },
+    {
+      "archivo": "recursos/fichas/F03_Caudal_11_Una_tesis_que_se_sostiene.pdf",
+      "bytes": 82401,
+      "sha256": "5634f8404ee817ce8dd7bab027aa0b9c9dcb651672b80cdd3205c5332ed2891e"
+    },
+    {
+      "archivo": "recursos/fichas/F03_Caudal_11_Una_tesis_que_se_sostiene.png",
+      "bytes": 123600,
+      "sha256": "27a54ad2bcaaa6f028f7685979deefd727bd3eafd242039241b1986664b765b0"
+    },
+    {
+      "archivo": "recursos/fichas/F03_Caudal_11_Una_tesis_que_se_sostiene.svg",
+      "bytes": 1041609,
+      "sha256": "e91595fb12c4243817ab3359c17f91216312285ed7fbc604a0ee17d03ab3103b"
+    },
+    {
+      "archivo": "recursos/fichas/F04_Caudal_11_Leer_el_medio.pdf",
+      "bytes": 82462,
+      "sha256": "fbd3829b1ecae02c46e684d465700abf0c18652fbda7d96d2f2528af2526fedf"
+    },
+    {
+      "archivo": "recursos/fichas/F04_Caudal_11_Leer_el_medio.png",
+      "bytes": 111174,
+      "sha256": "b606c2ff6427e5003a27e43635d0070e77fc16785cc459948d1e5ed400d4b1b5"
+    },
+    {
+      "archivo": "recursos/fichas/F04_Caudal_11_Leer_el_medio.svg",
+      "bytes": 1040978,
+      "sha256": "563a245952241e06373087a2b27b2294a9649aa4ac1c987406aaf0977be54dea"
+    },
+    {
+      "archivo": "recursos/fichas/F05_Caudal_Bitacora_de_relectura.pdf",
+      "bytes": 82541,
+      "sha256": "2667a3604b168b391724960885b3e852ce3d11776c7efabbea4875b0f8e41c0f"
+    },
+    {
+      "archivo": "recursos/fichas/F05_Caudal_Bitacora_de_relectura.png",
+      "bytes": 119080,
+      "sha256": "66637d80c169f385921c4b6ca40be23e466fe4f67b160e9e09763b6f19e6c042"
+    },
+    {
+      "archivo": "recursos/fichas/F05_Caudal_Bitacora_de_relectura.svg",
+      "bytes": 1041736,
+      "sha256": "1b42e3ccc30e0a5ff0cbdd75661d73ef40c9ab1d12136c270100e2523c066bb1"
+    },
+    {
+      "archivo": "recursos/fichas/F06_Caudal_Clinica_de_distractores.pdf",
+      "bytes": 82552,
+      "sha256": "9a0e4693e86765af4ef5457091aa2e7e8da397cfe22c6f755b67dd600a963017"
+    },
+    {
+      "archivo": "recursos/fichas/F06_Caudal_Clinica_de_distractores.png",
+      "bytes": 105964,
+      "sha256": "d60ab88ce3f5774f0acc28c5d1c73dafa0c83ba16018859095558d2412d1bcc7"
+    },
+    {
+      "archivo": "recursos/fichas/F06_Caudal_Clinica_de_distractores.svg",
+      "bytes": 1043473,
+      "sha256": "b1ec76b759879550ef2960d52307fd3449fed5f52b1434f39dc14e88288fa0a8"
+    },
+    {
+      "archivo": "recursos/fichas/F07_Caudal_Revision_entre_pares.pdf",
+      "bytes": 82921,
+      "sha256": "8f43ca4b48ccbb0039140a104916d416c0675c17090d07a76930eae2f69c3a8d"
+    },
+    {
+      "archivo": "recursos/fichas/F07_Caudal_Revision_entre_pares.png",
+      "bytes": 137784,
+      "sha256": "3113b2f618e90f8b0e1206aa017d6f2f6a44ffbe442271e54dedd23938612c86"
+    },
+    {
+      "archivo": "recursos/fichas/F07_Caudal_Revision_entre_pares.svg",
+      "bytes": 1043836,
+      "sha256": "59c10a587187f363192f31c1f724ee7d7b2259847378fb1dcab530375a0adbf2"
+    },
+    {
+      "archivo": "recursos/fichas/F08_Caudal_Mi_portafolio.pdf",
+      "bytes": 82606,
+      "sha256": "5600e95b88b5ab4ce095a3076a7713fdb6c70f3abf5c7c42a949815b0232f886"
+    },
+    {
+      "archivo": "recursos/fichas/F08_Caudal_Mi_portafolio.png",
+      "bytes": 114958,
+      "sha256": "379eb1561c2326b40f8ef7ebea617ec2c01ff9e3e45ecfa4224422ab8517f778"
+    },
+    {
+      "archivo": "recursos/fichas/F08_Caudal_Mi_portafolio.svg",
+      "bytes": 1046257,
+      "sha256": "2ab49008a42964f11cd818eb5f94074e69fd50a607e087adc4b90c30b52c055f"
+    },
+    {
+      "archivo": "recursos/fuentes/AtkinsonHyperlegible-Regular.ttf",
+      "bytes": 54348,
+      "sha256": "7fb917c89019896d0b52ee84b7cbb3304c18cb90b19a62f5e32712bd23e97669"
+    },
+    {
+      "archivo": "recursos/fuentes/Libron-LICENSE.txt",
+      "bytes": 4584,
+      "sha256": "bc596e272be47691f70c090bca17a8b6e58bd021baada8be18510beceed6cfbd"
+    },
+    {
+      "archivo": "recursos/fuentes/Libron-Regular.ttf",
+      "bytes": 216792,
+      "sha256": "c671b736eeeae81b0eb12ff45690de83b6620be9502c62be9a84064c6f590b31"
+    },
+    {
+      "archivo": "recursos/fuentes/OFL-Atkinson.txt",
+      "bytes": 4352,
+      "sha256": "f32d22b3908fcad2c86a74000614ec22e6a7f66ea7e867e616026a27aebdc143"
+    },
+    {
+      "archivo": "recursos/fuentes/OFL-YoungSerif.txt",
+      "bytes": 4398,
+      "sha256": "737d8d343b674c6894f373de71a044b6782c130f2aebf180933d63ddf7a3dc19"
+    },
+    {
+      "archivo": "recursos/fuentes/YoungSerif-Regular.ttf",
+      "bytes": 106608,
+      "sha256": "42bb2602364b28569fdce5eeb6ab3d81cf8090ba81b211f1229ed69f33155523"
+    },
+    {
+      "archivo": "recursos/portadas/caudal-10-portada-a.pdf",
+      "bytes": 4447706,
+      "sha256": "f5a58e1cb80db43ae90c256d27879b9bb446bb659cf7b711eb651798ee8d6bf9"
+    },
+    {
+      "archivo": "recursos/portadas/caudal-10-portada-a.png",
+      "bytes": 3892930,
+      "sha256": "b95f2abbf0d0e2c40818a5375a8151a498a98f769b66706b65a5432e71746b9b"
+    },
+    {
+      "archivo": "recursos/portadas/caudal-10-portada-a.svg",
+      "bytes": 504919,
+      "sha256": "563eb74fae80123e0c1c6b2bf6df38a117a30f5afcda28d4811155ee039b2d57"
+    },
+    {
+      "archivo": "recursos/portadas/caudal-10-portada-b.pdf",
+      "bytes": 4297477,
+      "sha256": "76c8800b9875a000ac3ce702bdaad80ed788f8c38ae488d2435fe6011895c1b7"
+    },
+    {
+      "archivo": "recursos/portadas/caudal-10-portada-b.png",
+      "bytes": 3628628,
+      "sha256": "263d3dcff3f460c4ce52d3517dd6709f10575fa8856cba08bd0aaeacf4f69065"
+    },
+    {
+      "archivo": "recursos/portadas/caudal-10-portada-b.svg",
+      "bytes": 504919,
+      "sha256": "d506df704577884489d1053749163e26897da75b7f544aa57ed3cc3aedb13120"
+    },
+    {
+      "archivo": "recursos/portadas/caudal-11-portada-a.pdf",
+      "bytes": 4434092,
+      "sha256": "2d762ab20e07bae545e051a79711497978a72fdbeee3e43ddcdebb4deb41bf7d"
+    },
+    {
+      "archivo": "recursos/portadas/caudal-11-portada-a.png",
+      "bytes": 3910632,
+      "sha256": "1ea7689d70d6825bf476f0779f38911dba2a52b96a5a363bc3d41c8bbc543298"
+    },
+    {
+      "archivo": "recursos/portadas/caudal-11-portada-a.svg",
+      "bytes": 504912,
+      "sha256": "4300c5489b048ff3240e20202029f3d6682972996f6f299557794ff87deec7f7"
+    },
+    {
+      "archivo": "recursos/portadas/caudal-11-portada-b.pdf",
+      "bytes": 3761938,
+      "sha256": "c13c3760c6e3950ee19cb6aa55fe36ae1ab960000f0fe6873bbf89d26d7eec7c"
+    },
+    {
+      "archivo": "recursos/portadas/caudal-11-portada-b.png",
+      "bytes": 3049942,
+      "sha256": "f5b96fc753f2f533551466238ba93960f643de2efd670b858b1868c04e4104ed"
+    },
+    {
+      "archivo": "recursos/portadas/caudal-11-portada-b.svg",
+      "bytes": 504912,
+      "sha256": "ca9c34fb835ee449500578e6cccf6c52d0c426e89d8ea7e4a338895e6f78245c"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-01-nacimiento.png",
+      "bytes": 21488,
+      "sha256": "dfadf33e3c12660c552b6452ac783df3c39dd7bd092d1d6c1d5ad89d3a1cb530"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-01-nacimiento.svg",
+      "bytes": 504833,
+      "sha256": "23b8aa5b0d20a19f485bbf0783c491e0b9e9c613142872062341f7998970d977"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-02-dialogar.png",
+      "bytes": 19397,
+      "sha256": "7a2ef146eba5888d1c057a7e50e44a88dac5dde5fe4d54443eb20953972d7392"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-02-dialogar.svg",
+      "bytes": 504870,
+      "sha256": "e989c138f89deb96c8beb66a7a5c84b6a4ccc91a46b426f8a02d65478e01ff59"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-03-leer.png",
+      "bytes": 21662,
+      "sha256": "6930f02b490533c14549fc0c72b472a1241505d3f4e29d98f1972fb09597769d"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-03-leer.svg",
+      "bytes": 504950,
+      "sha256": "5a895e1dc16e63da88fd52cc2971b72efd0ba802ce243c3bbd5856308e2a806a"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-04-confluencia.png",
+      "bytes": 22721,
+      "sha256": "750ab17cc439a262d08315dea09a60c2789c56309891ecee9f767b15b4d361c0"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-04-confluencia.svg",
+      "bytes": 504874,
+      "sha256": "013c7150bc93bce54c7fa0419eaae482d72148923e36d98cce50853e04278236"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-05-construir.png",
+      "bytes": 18264,
+      "sha256": "5cd6cf612f8fb18812d4426be8a7df7f75f2cf823be85ffa93600cfdbf38ade3"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-05-construir.svg",
+      "bytes": 504890,
+      "sha256": "3ccc3fe36a05ac0ba74758573eb90fb97836d438d9a8296792627bd6d2e5fec9"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-06-transformar.png",
+      "bytes": 18788,
+      "sha256": "6e7f6a475ec909dd3cd66d45989394b9b82f7e39458bbec85b5782a46b6dc32b"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-06-transformar.svg",
+      "bytes": 504862,
+      "sha256": "3f26b77546ce841f16238ac1f2999f49d63b500a0245d773b5ca71c864fdf6e6"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-07-orilla.png",
+      "bytes": 19679,
+      "sha256": "6be6c76ac8070ebe3ab2657fda9a092ab54b01493a229cc78a9b2e1af7b293e3"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-07-orilla.svg",
+      "bytes": 504890,
+      "sha256": "05c024494712f412eaaa2e7cda19680ecbd97314a5e0cf328b8fae7ea7f0c21a"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-08-desembocadura.png",
+      "bytes": 22236,
+      "sha256": "8626afdc8bcbc56062aa51530e04d3aea6424b8cee85de99da217aaf1740b964"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-10-separador-08-desembocadura.svg",
+      "bytes": 504880,
+      "sha256": "3fa7b75240caedb4f006a697bc02cac107aff76af08d9164b8c2f07e730a4a1a"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-01-nacimiento.png",
+      "bytes": 21616,
+      "sha256": "8695fce14ee884616f31dc1dc32ed855f7e8fb8c277acef53a66c9b61503a59f"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-01-nacimiento.svg",
+      "bytes": 504833,
+      "sha256": "05a8ecbc6b15b9339d37db9f96b34bd70916e5ef3b13a005967bd18e7005130f"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-02-dialogar.png",
+      "bytes": 19491,
+      "sha256": "ddf676cfa61ac1875b2a4b17b6d038e9b89d74e53256a24e110e51e1a9969e06"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-02-dialogar.svg",
+      "bytes": 504870,
+      "sha256": "20ed18c915011cc1c50030ca66649cff092b54134c58be127b3f9f1cb2f7c455"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-03-leer.png",
+      "bytes": 21688,
+      "sha256": "95925955f13063bd6d0d3b60c5ea6ee4da93de0b9e05103154cb32bb51bfd4de"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-03-leer.svg",
+      "bytes": 504950,
+      "sha256": "4ed97840a5305c8f238a5c95f2ae543006f8b992d21013ce050779d8bcb4751e"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-04-confluencia.png",
+      "bytes": 22763,
+      "sha256": "c0c7ba2ba698dfa3059a3f333345da9fcd4c4e77f3fb280180a6864d9250492f"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-04-confluencia.svg",
+      "bytes": 504874,
+      "sha256": "0426908af9307f71f951f80892632771867d31339ffb20f2706d70d441488a5d"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-05-construir.png",
+      "bytes": 18355,
+      "sha256": "c64d79a741cc4c03a30338979d34fba93e0001017df27fc7d74d3129d2d57090"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-05-construir.svg",
+      "bytes": 504890,
+      "sha256": "d9213b7f42bcf585cdb2d788f51e157848a562d1dd9be4bca887042e4a1fcfcd"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-06-transformar.png",
+      "bytes": 18898,
+      "sha256": "7949e426deca752a23d748155a6644e5f35d586c3cd116d8321d158384fcb1d5"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-06-transformar.svg",
+      "bytes": 504862,
+      "sha256": "816d0375af18964b9be52507bfa81a8f7149c13a7899145589250ff9b4d9381b"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-07-orilla.png",
+      "bytes": 19847,
+      "sha256": "183f927fee0237fc88648feeb69eb5496cf1842059305938b35c96b873ac1ab8"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-07-orilla.svg",
+      "bytes": 504890,
+      "sha256": "c698ca72173dbe2b0f1d1796a77463005cf1172425a782bb69ac20c2d416cbdb"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-08-desembocadura.png",
+      "bytes": 22316,
+      "sha256": "8096298427a5e147ed2d38fa2f099afe5a3b97b84b1d460116e588c8a179bb73"
+    },
+    {
+      "archivo": "recursos/vectores/caudal-11-separador-08-desembocadura.svg",
+      "bytes": 504880,
+      "sha256": "842c9969f92df28faa04d59aa186a9c0eeab03f4c79d79997e727c988f86c9a6"
+    },
+    {
+      "archivo": "recursos/vectores/icono-confluencia.svg",
+      "bytes": 504315,
+      "sha256": "03a5737940577fc6855155fadc1f1e51e5882eec3fb15b9d448b4f3872efa0df"
+    },
+    {
+      "archivo": "recursos/vectores/icono-construir.svg",
+      "bytes": 504338,
+      "sha256": "d6467e17a3e45fb9fb078d7680c65f7b316d24281ef79b6908d5243d8d6becc0"
+    },
+    {
+      "archivo": "recursos/vectores/icono-desembocadura.svg",
+      "bytes": 504329,
+      "sha256": "c74572930d6e74ca5c878a058064dc95071a2cd4066ecde95e59f5e63e7b57d3"
+    },
+    {
+      "archivo": "recursos/vectores/icono-dialogar.svg",
+      "bytes": 504314,
+      "sha256": "b0530d382c6ec2f679eeca3c1c084bbff911740124a492cfd690b8f7ef0409db"
+    },
+    {
+      "archivo": "recursos/vectores/icono-leer.svg",
+      "bytes": 504392,
+      "sha256": "560c935583558d40c369ece60fe4d67cff8dfe8642f1d512eda36ce60a5111fd"
+    },
+    {
+      "archivo": "recursos/vectores/icono-nacimiento.svg",
+      "bytes": 504280,
+      "sha256": "958e9079e59df3ca148b19c8857868cda4d98c64c00106489b42df8442e26cf6"
+    },
+    {
+      "archivo": "recursos/vectores/icono-orilla.svg",
+      "bytes": 504334,
+      "sha256": "a954bfa18caf45df64ad2e62edf799fb506faa35b30aa4ba6ca94f1b21160248"
+    },
+    {
+      "archivo": "recursos/vectores/icono-transformar.svg",
+      "bytes": 504317,
+      "sha256": "28e04ffdaec91c82fb31b30609c0b94ab9916664404fbaa508a8bf3a3fda6710"
+    }
+  ]
+}

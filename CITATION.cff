@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Para citar este proyecto en curso, utiliza estos metadatos e identifica la versión del recurso consultado."
+type: dataset
+title: "Caudal: Lengua Castellana, grados 9, 10 y 11"
+version: 0.1.0
+date-released: 2026-10-25
+authors:
+  - family-names: "De León Llanos"
+    given-names: "Néstor Fernando"
+license: CC-BY-SA-4.0
+repository-code: "https://github.com/nestorfernando3/caudal"
+url: "https://github.com/nestorfernando3/caudal"
+abstract: "Proyecto pedagógico en curso: documentación y recursos para Lengua Castellana en grados 9, 10 y 11. No contiene datos empíricos de participantes."
+keywords:
+  - "Lengua Castellana"
+  - "cocreación"
+  - "literacidad crítica"
+  - "materiales educativos"
