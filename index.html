@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caudal · Lengua Castellana</title>
+<meta name="description" content="Caudal: serie de libros de Lengua Castellana para 9.º, 10.º y 11.º de la IED Brisas del Río, Barranquilla.">
+<style>
+@font-face { font-family: "Young Serif"; src: url("fonts/YoungSerif-Regular.ttf"); font-display: swap; }
+@font-face { font-family: "Literata"; src: url("fonts/LiterataCaudal-Regular.ttf"); font-display: swap; }
+@font-face { font-family: "Literata"; src: url("fonts/LiterataCaudal-Italic.ttf"); font-style: italic; font-display: swap; }
+@font-face { font-family: "Literata"; src: url("fonts/LiterataCaudal-Bold.ttf"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Atkinson"; src: url("fonts/AtkinsonHyperlegible-Regular.ttf"); font-display: swap; }
+@font-face { font-family: "Atkinson"; src: url("fonts/AtkinsonHyperlegible-Bold.ttf"); font-weight: 700; font-display: swap; }
+
+:root {
+  --tinta: #1F2A30; --papel: #F4EDE1; --saber: #5E6460; --linea: #CDBFA8; --suave: #EADFCC;
+  --vino: #5B1D29; --rio: #2C5A70;
+  --c9: #4E6B3A; --c10: #2C5A70; --c11: #2A7A78;
+  --fondo: #F4EDE1; --tx: #1F2A30; --tx2: #5E6460;
+  --ancho: 1180px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--fondo); color: var(--tx); font: 18px/1.6 Literata, Georgia, serif; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--rio); outline-offset: 3px; }
+.contenedor { max-width: var(--ancho); margin: 0 auto; padding: 0 24px; }
+.rotulo { font: 700 .76rem/1 Atkinson, system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; opacity: .75; }
+header, main, footer { position: relative; z-index: 1; }
+
+/* Lienzo del efecto de flujo (imágenes que se curvan al bajar) */
+#flujo { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+img.flujo.gl { opacity: 0; }
+
+/* Altímetro, como el medidor de The Deep Sea pero al revés: el río baja hacia el mar */
+.altimetro { position: fixed; left: 20px; bottom: 20px; z-index: 5; display: flex; align-items: baseline; gap: 12px;
+  padding: 10px 16px; border-radius: 99px; background: rgba(31,42,48,.82); border: 1px solid rgba(244,237,225,.22); color: #F4EDE1; backdrop-filter: blur(6px);
+  font: 700 .9rem Atkinson, sans-serif; letter-spacing: .02em; transition: opacity .4s; }
+.altimetro b { font: 400 1.25rem "Young Serif", serif; letter-spacing: 0; font-variant-numeric: tabular-nums; min-width: 5.6ch; text-align: right; }
+.altimetro span { opacity: .7; font-weight: 400; }
+
+/* Portada */
+.portada { position: relative; min-height: 100svh; display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; }
+#rio, #remanso { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+#remanso { opacity: 0; transition: opacity .9s ease; }
+#remanso.listo { transition: none; }
+.portada { background: transparent; }
+.portada.sin-3d { background: #E9E1CF url("img/descenso/r01-lecho.jpg") center / cover; }
+.portada h1, .lema, .portada .rotulo { text-shadow: 0 0 18px rgba(244,237,225,.95), 0 0 4px rgba(244,237,225,.9); }
+.sonido { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; padding: 9px 15px; border-radius: 99px;
+  background: rgba(244,237,225,.82); backdrop-filter: blur(6px); border: 1px solid rgba(31,42,48,.18); font: 700 .85rem Atkinson, sans-serif; color: var(--tinta); }
+.sonido[aria-pressed="true"] { background: var(--tinta); color: var(--papel); }
+.sonido:focus-visible { outline: 3px solid var(--rio); }
+.portada::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 46% 30% at 50% 36%, rgba(244,237,225,.5), rgba(244,237,225,0) 80%), linear-gradient(180deg, rgba(244,237,225,.3), rgba(244,237,225,0) 22%); }
+.portada > * { position: relative; z-index: 1; }
+.portada .tope { display: flex; justify-content: space-between; align-items: center; padding: 22px 24px; }
+.portada .tope .marca { font: 400 1.4rem "Young Serif", serif; color: var(--vino); padding: 6px 14px; border-radius: 99px; background: rgba(244,237,225,.82); backdrop-filter: blur(6px); }
+.portada .centro { display: grid; justify-items: center; align-content: center; text-align: center; padding: 0 16px; }
+.portada h1 { font: 400 clamp(3.6rem, 12vw, 9.5rem)/.9 "Young Serif", Georgia, serif; color: var(--vino); margin: 0; }
+.lema { font-size: clamp(1.05rem, 2.2vw, 1.35rem); max-width: 620px; margin: 14px auto 0; }
+.lema em { color: var(--rio); }
+.pie-portada { display: grid; justify-items: center; gap: 6px; padding: 0 0 28px; font: 700 .85rem Atkinson, sans-serif; }
+.pie-portada svg { animation: flotar 2.4s ease-in-out infinite; }
+@keyframes flotar { 50% { transform: translateY(5px); } }
+
+/* Estante con los libros en 3D */
+.estante { display: flex; justify-content: center; align-items: flex-end; gap: clamp(18px, 5vw, 72px); margin: clamp(24px, 5vh, 56px) 0 8px; perspective: 1600px; }
+.escena { --w: clamp(96px, 19vw, 210px); position: relative; width: var(--w); height: calc(var(--w) * 1.414); perspective: calc(var(--w) * 7); touch-action: pan-y; cursor: grab; -webkit-tap-highlight-color: transparent; }
+.escena:active { cursor: grabbing; }
+.escena .sombra { position: absolute; left: 4%; right: 4%; bottom: -16px; height: 22px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(31,42,48,.38), rgba(31,42,48,0)); filter: blur(2px); transform: translateZ(-1px); }
+.escena .nombre { text-shadow: 0 0 10px rgba(244,237,225,1), 0 0 3px rgba(244,237,225,1); position: absolute; left: 0; right: 0; top: calc(100% + 18px); text-align: center; font: 700 .8rem Atkinson, sans-serif; letter-spacing: .1em; text-transform: uppercase; opacity: .7; }
+.libro { --d: calc(var(--w) * .16); position: absolute; inset: 0; transform-style: preserve-3d; will-change: transform; }
+.cara { position: absolute; backface-visibility: hidden; overflow: hidden; }
+.frente, .dorso { inset: 0; border-radius: 2px 5px 5px 2px; }
+.frente { transform: translateZ(calc(var(--d) / 2)); background: #F4EDE1; box-shadow: inset 3px 0 0 rgba(0,0,0,.18); }
+.frente img { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 82%; object-fit: cover; object-position: center 70%; }
+.frente .t1 { position: absolute; left: 7%; top: 4.5%; font: 400 calc(var(--w) * .135)/1 "Young Serif", serif; color: var(--vino); }
+.frente .t2 { position: absolute; right: 7%; top: 3%; font: 400 calc(var(--w) * .17)/1 "Young Serif", serif; color: var(--vino); }
+.frente .t3 { position: absolute; left: 7.5%; top: 13%; font: italic 400 calc(var(--w) * .07)/1 Literata, serif; color: var(--tinta); }
+.frente .t4 { position: absolute; left: 0; right: 0; bottom: 0; height: 5%; background: #F4EDE1; display: flex; justify-content: space-between; align-items: center; padding: 0 7%;
+  font: 700 calc(var(--w) * .028)/1 Atkinson, sans-serif; letter-spacing: .05em; color: var(--tinta); }
+.frente::after { content: ""; position: absolute; inset: 0; background: linear-gradient(105deg, rgba(255,255,255,0) 40%, rgba(255,255,255,.22) 50%, rgba(255,255,255,0) 60%);
+  transform: translateX(var(--brillo, -60%)); pointer-events: none; }
+.dorso { transform: rotateY(180deg) translateZ(calc(var(--d) / 2)); background: var(--c); color: #F4EDE1; padding: 12% 10%; display: grid; align-content: start; gap: 6px; }
+.dorso h4 { margin: 0 0 4px; font: 400 calc(var(--w) * .1)/1.1 "Young Serif", serif; }
+.dorso p { margin: 0; font: 400 calc(var(--w) * .052)/1.4 Literata, serif; opacity: .9; }
+.dorso ol { margin: 6px 0 0; padding-left: 1.1em; font: 400 calc(var(--w) * .05)/1.45 Literata, serif; }
+.lomo { width: var(--d); top: 0; bottom: 0; left: calc((var(--w) - var(--d)) / 2); transform: rotateY(-90deg) translateZ(calc(var(--w) / 2));
+  background: var(--c); color: #F4EDE1; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 0 0 1px rgba(0,0,0,.12); }
+.lomo span { writing-mode: vertical-rl; transform: rotate(180deg); font: 400 calc(var(--w) * .07)/1 "Young Serif", serif; white-space: nowrap; letter-spacing: .02em; }
+.cantos { width: var(--d); top: 1.5%; bottom: 1.5%; left: calc((var(--w) - var(--d)) / 2); transform: rotateY(90deg) translateZ(calc(var(--w) / 2 - 3px));
+  background: repeating-linear-gradient(90deg, #F7F1E6 0 1px, #E3D8C4 1px 2px); }
+.arriba, .abajo { height: var(--d); left: 0; right: 3px; top: calc((var(--w) * 1.414 - var(--d)) / 2);
+  background: repeating-linear-gradient(0deg, #F7F1E6 0 1px, #E3D8C4 1px 2px); }
+.arriba { transform: rotateX(90deg) translateZ(calc(var(--w) * .707 - 2px)); }
+.abajo { transform: rotateX(-90deg) translateZ(calc(var(--w) * .707 - 2px)); }
+
+/* Descenso */
+.zona { position: relative; }
+.tramo-cabeza { min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); align-items: center; gap: 48px; padding: 80px 0; }
+.tramo-cabeza h2 { font: 400 clamp(3rem, 8vw, 6.4rem)/.95 "Young Serif", Georgia, serif; margin: .15em 0 .25em; }
+.tramo-cabeza .bajada { font-size: 1.15rem; max-width: 520px; color: var(--tx2); margin: 0 0 22px; }
+.tramo-cabeza .escena { --w: clamp(170px, 26vw, 300px); justify-self: center; }
+.piezas { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.piezas a { display: inline-block; font: 700 .85rem Atkinson, sans-serif; text-decoration: none; padding: 9px 15px; border: 1.5px solid currentColor; border-radius: 99px; transition: background .2s, color .2s; }
+.piezas a:hover { background: var(--tx); color: var(--fondo); }
+.indicacion { font: 700 .78rem Atkinson, sans-serif; letter-spacing: .08em; text-transform: uppercase; opacity: .55; margin-top: 18px; }
+
+.panorama { margin: 10vh auto; width: min(92vw, 1320px); aspect-ratio: 16 / 8; border-radius: 6px; overflow: hidden; }
+.panorama img { width: 100%; height: 100%; object-fit: cover; }
+
+.hito { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); padding: 22vh 0; }
+.hito .tarjeta { grid-column: 1; max-width: 560px; justify-self: end; text-align: right; }
+.hito.der .tarjeta { grid-column: 2; justify-self: start; text-align: left; }
+.hito .alt { font: 700 .78rem Atkinson, sans-serif; letter-spacing: .14em; text-transform: uppercase; opacity: .6; }
+.hito h3 { font: 400 clamp(1.7rem, 3.6vw, 2.5rem)/1.1 "Young Serif", serif; margin: 6px 0 4px; }
+.hito p { margin: 0; color: var(--tx2); }
+.hito .preg { font: italic 400 1.15rem/1.45 Literata, serif; color: var(--tx); margin: 4px 0 10px; }
+.hito .obra { font: 700 .82rem/1.4 Atkinson, sans-serif; letter-spacing: .02em; }
+.hito .tarjeta { padding: 0 clamp(118px, 12vw, 172px); opacity: 0; transform: translateY(30px); transition: opacity .9s, transform .9s cubic-bezier(.2,.8,.2,1); }
+.hito.visible .tarjeta { opacity: 1; transform: none; }
+.ilus { grid-row: 1; grid-column: 2; justify-self: start; align-self: center; margin: 0 0 0 clamp(96px, 11vw, 160px); width: min(30vw, 400px); padding: 0; }
+.hito.der .ilus { margin: 0 clamp(96px, 11vw, 160px) 0 0; }
+.hito.der .ilus { grid-column: 1; justify-self: end; }
+.hito .tarjeta { grid-row: 1; }
+.ilus img, .estampa img { height: auto; transform: translate3d(var(--dx, 0px), var(--py, 0px), 0); will-change: transform; opacity: 0; transition: opacity 1.2s ease; }
+.hito.visible .ilus img, .estampa.visible img { opacity: 1; }
+.estampa { display: grid; place-items: center; padding: 6vh 16px; }
+.estampa img { width: min(88vw, 920px); }
+.susurro { padding: 26vh 0; text-align: center; font: italic 400 clamp(1.3rem, 3vw, 2rem)/1.35 Literata, serif; max-width: 680px; margin: 0 auto; opacity: .8; }
+
+/* Rutas */
+.rutas { padding: 16vh 0 12vh; }
+.rutas h2 { font: 400 clamp(2.2rem, 5vw, 3.4rem)/1.05 "Young Serif", serif; margin: .2em 0 .3em; }
+.rutas .intro { max-width: 640px; color: var(--tx2); }
+.selector { display: inline-flex; gap: 4px; padding: 5px; background: rgba(244,237,225,.1); border: 1px solid rgba(244,237,225,.25); border-radius: 99px; margin: 24px 0 28px; flex-wrap: wrap; }
+.selector button { all: unset; cursor: pointer; font: 700 .95rem Atkinson, sans-serif; padding: 10px 20px; border-radius: 99px; transition: background .25s, color .25s; }
+.selector button[aria-selected="true"] { background: #F4EDE1; color: var(--tinta); }
+.selector button:focus-visible { outline: 3px solid #9FC1BF; }
+.actividad { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 40px; align-items: start; }
+.ficha-ruta { background: #FBF7F0; color: var(--tinta); border-left: 6px solid var(--rc); border-radius: 4px; padding: 26px 30px; min-height: 250px; }
+.ficha-ruta .etq { font: 700 .74rem Atkinson, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--rc); }
+.ficha-ruta h3 { font: 700 1.2rem/1.3 Literata, serif; margin: 8px 0 12px; }
+.ficha-ruta ol { padding-left: 1.2em; margin: 0 0 12px; }
+.ficha-ruta .entregas { margin: 0; font-size: .95rem; }
+.ficha-ruta[hidden] { display: none; }
+.ficha-ruta.entra { animation: entrar .45s cubic-bezier(.2,.8,.2,1); }
+@keyframes entrar { from { opacity: 0; transform: translateY(10px); } }
+.nota-ruta { font-size: .95rem; color: var(--tx2); border-top: 2px solid currentColor; padding-top: 14px; }
+
+.gratitud { padding: 8vh 0 14vh; }
+.gratitud h2 { font: 400 clamp(2.2rem, 5vw, 3.4rem)/1.05 "Young Serif", serif; margin: .2em 0 1em; }
+.directivos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 24px 56px; }
+.nombre-grande { font: 400 clamp(2rem, 4.6vw, 3.4rem)/1.05 "Young Serif", serif; margin: 0; color: var(--tx); }
+.cargo { margin: 8px 0 0; font: 700 .85rem Atkinson, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--tx2); }
+.motivo { font: italic 400 1.3rem/1.5 Literata, serif; margin: 28px 0 0; color: var(--tx2); }
+.gratitud .sub { font: 700 .85rem Atkinson, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--tx2); margin: 12vh 0 18px; padding-top: 24px; border-top: 1px solid rgba(244,237,225,.2); }
+.estudiantes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 12px 32px; font: 400 1.35rem/1.35 Literata, serif; color: var(--tx); }
+.grupo { margin: 0 0 14px; font: 700 .8rem Atkinson, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: #9FC1BF; }
+.estudiantes .pendiente { font: 700 .95rem Atkinson, sans-serif; color: #F4D27A; border: 1.5px dashed currentColor; padding: 8px 14px; border-radius: 6px; }
+.aviso { font: 400 clamp(3rem, 11vw, 9rem)/.95 "Young Serif", serif; margin: 12vh 0 16px; color: var(--tx); letter-spacing: -.01em; }
+.aviso-sub { font-size: clamp(1.05rem, 2vw, 1.3rem); max-width: 640px; margin: 0; color: var(--tx2); }
+.licencia { max-width: 560px; }
+.licencia p { margin: 10px 0 0; font-size: .85rem; }
+.cc-insignia { display: inline-flex; gap: 6px; color: var(--tx); }
+.cc-insignia svg { width: 34px; height: 34px; }
+footer { padding: 48px 0 110px; font: .95rem/1.6 Atkinson, sans-serif; color: var(--tx2); }
+footer .contenedor { display: flex; flex-wrap: wrap; gap: 16px 40px; justify-content: space-between; border-top: 1px solid rgba(244,237,225,.2); padding-top: 32px; }
+footer strong { color: var(--tx); }
+
+@media (max-width: 760px) {
+  body { font-size: 17px; }
+  .contenedor { padding: 0 16px 0 40px; }
+  .estante { gap: 14px; }
+  .pie-portada { padding-bottom: 76px; }
+  .escena .nombre { font-size: .66rem; letter-spacing: .04em; }
+  .tramo-cabeza { grid-template-columns: minmax(0, 1fr); gap: 56px; padding: 72px 0; }
+  .tramo-cabeza .escena { order: -1; }
+  .panorama { aspect-ratio: 4 / 5; margin: 6vh auto; }
+  .hito { grid-template-columns: minmax(0, 1fr); padding: 16vh 0; }
+  .hito .tarjeta, .hito.der .tarjeta { grid-column: 1; justify-self: start; text-align: left; padding: 0; }
+  .ilus, .hito.der .ilus { grid-column: 1; grid-row: 2; justify-self: center; width: 72vw; padding: 28px 0 0; margin: 0; }
+  .actividad { grid-template-columns: minmax(0, 1fr); }
+  .altimetro { left: 12px; bottom: 12px; padding: 8px 14px; font-size: .8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+  .hito .tarjeta, .ilus img, .estampa img { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<canvas id="rio" aria-hidden="true"></canvas>
+<canvas id="remanso" aria-hidden="true"></canvas>
+<canvas id="flujo" aria-hidden="true"></canvas>
+
+<div class="altimetro" aria-hidden="true"><b id="alt-num">4.200</b> m <span id="alt-zona">Páramo</span></div>
+
+<header class="portada zona" data-alt="4200" data-zona="Páramo" data-fondo="#F4EDE1">
+  <div class="tope"><span class="marca">Caudal</span><button class="sonido" id="sonido" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Activar sonido</span></button></div>
+  <div class="centro">
+    <p class="rotulo">Lengua Castellana · 9.º, 10.º y 11.º</p>
+    <h1>Caudal</h1>
+    <p class="lema">Tres libros para leer y escribir como se recorre un río: en noveno sigues la corriente desde las <em>cabeceras</em>, en décimo pones las aguas en <em>confluencia</em> y en once, en el <em>delta</em>, las ves separarse y eliges tu cauce.</p>
+    <div class="estante" id="estante"></div>
+  </div>
+  <a class="pie-portada" href="#cabeceras" style="text-decoration:none">
+    Toca el agua, gira los libros y baja para recorrer el río.
+    <svg width="14" height="16" viewBox="0 0 14 16" aria-hidden="true"><path d="M7 1v13M1 8l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+  </a>
+</header>
+
+<main>
+
+<div class="estampa" data-alt=4050><img src="img/descenso/d01-niebla-frailejones.webp" alt="Frailejones que salen de una banda de niebla en el páramo."></div>
+
+<!-- Tramo 1 -->
+<section class="zona" id="cabeceras" data-alt="3900" data-zona="Cabeceras" data-fondo="#E6EAE3">
+  <div class="contenedor tramo-cabeza">
+    <div>
+      <p class="rotulo">Tramo 1 · Donde nace el río</p>
+      <h2>Cabeceras</h2>
+      <p class="bajada">Caudal 9. Este libro es un río, y vas a recorrerlo. Leerás a Quiroga, Bécquer, Isaacs, Rivera, Darío, Silva y Vallejo, y también crónicas, columnas y anuncios, porque la lengua no vive solo en los libros: vive en los titulares, en los memes y en los afiches del barrio.</p>
+      <ul class="piezas"><li><a href="https://github.com/nestorfernando3/caudal">Libro del estudiante</a></li><li><a href="https://github.com/nestorfernando3/caudal">Guía docente</a></li><li><a href="https://github.com/nestorfernando3/caudal">Biblioteca del río</a></li><li><a href="https://github.com/nestorfernando3/caudal">Celular</a></li></ul>
+      <p class="indicacion">Toca el libro para darle la vuelta</p>
+    </div>
+    <div class="escena" data-libro="9" data-modo="tramo"></div>
+  </div>
+</section>
+<div class="panorama zona" data-alt="3700" data-zona="Bosque de niebla" data-fondo="#DCE4D8"><img class="flujo" src="img/caudal-9.jpg" data-pos="0.38" alt="Arroyos que bajan entre la niebla y los frailejones de la sierra."></div>
+<div class="contenedor">
+  <article class="hito" data-alt="3400"><div class="tarjeta"><span class="alt">3.400 m · Periodo 1</span><h3>El corazón y el espejo</h3><p class="preg">¿Contamos el mundo como lo sentimos o como lo vemos?</p><p class="obra">Corriente 1 de Caudal 9 · Teatro leído del miedo</p></div><figure class="ilus"><img src="img/descenso/d02-frailejon.webp" alt="Un frailejón alto sobre musgo y pajonal."></figure></article>
+  <p class="susurro">Un río no es una línea recta: nace en un lugar y arrastra lo que encuentra.</p>
+<div class="estampa"><img src="img/descenso/d03-arroyo-naciente.webp" alt="Un arroyo naciente baja entre piedras con musgo."></div>
+  <article class="hito der" data-alt="2800"><div class="tarjeta"><span class="alt">2.800 m · Periodo 2</span><h3>La selva que devora</h3><p class="preg">¿Somos lo que nuestro entorno hace de nosotros?</p><p class="obra">Corriente 2 de Caudal 9 · Expediente del río</p></div><figure class="ilus" data-mov=flotar><img src="img/descenso/d04-colibri.webp" alt="Un colibrí en vuelo junto a una flor roja."></figure></article>
+  <article class="hito" data-alt="2200"><div class="tarjeta"><span class="alt">2.200 m · Periodo 3</span><h3>Lo que dicen las palabras</h3><p class="preg">¿Quién decide lo que significa una palabra?</p><p class="obra">Corriente 3 de Caudal 9 · Campaña con conciencia</p></div><figure class="ilus"><img src="img/descenso/d05-cascada-niebla.webp" alt="Una cascada en el bosque de niebla."></figure></article>
+  <article class="hito der" data-alt="1600"><div class="tarjeta"><span class="alt">1.600 m · Periodo 4</span><h3>Romper el molde</h3><p class="preg">¿Cuándo romper una regla crea sentido y cuándo lo destruye?</p><p class="obra">Corriente 4 de Caudal 9 · Fanzine de ruptura</p></div><figure class="ilus"><img src="img/descenso/d06-tucan.webp" alt="Un tucán posado en una rama."></figure></article>
+</div>
+
+<!-- Tramo 2 -->
+<p class="susurro zona" data-alt="900" data-zona="Piedemonte" data-fondo="#C6D3C0">Así funciona la lengua: cambia según el territorio que atraviesa y se carga de las palabras de cada época.</p>
+<section class="zona" id="confluencias" data-alt="300" data-zona="Confluencias" data-fondo="#9DB8B4">
+  <div class="contenedor tramo-cabeza">
+    <div>
+      <p class="rotulo">Tramo 2 · Donde se juntan las aguas</p>
+      <h2>Confluencias</h2>
+      <p class="bajada">Caudal 10. Donde dos aguas se encuentran sin que ninguna deje de ser ella misma: un texto antiguo con uno cercano, una leyenda con un dato, tu interpretación con la objeción de otro lector. La pregunta ya no es solo qué dice un texto, sino quién lo dice, a quién y con qué evidencia.</p>
+      <ul class="piezas"><li><a href="https://github.com/nestorfernando3/caudal">Libro del estudiante</a></li><li><a href="https://github.com/nestorfernando3/caudal">Guía docente</a></li><li><a href="https://github.com/nestorfernando3/caudal">Biblioteca del río</a></li><li><a href="https://github.com/nestorfernando3/caudal">Celular</a></li></ul>
+      <p class="indicacion">Toca el libro para darle la vuelta</p>
+    </div>
+    <div class="escena" data-libro="10" data-modo="tramo"></div>
+  </div>
+</section>
+<div class="panorama zona" data-alt="250" data-zona="Confluencias" data-fondo="#86A9AA"><img class="flujo" src="img/caudal-10.jpg" data-pos="0.42" alt="Dos ríos del Caribe se juntan entre islas y árboles en flor."></div>
+<div class="estampa" data-alt=235><img src="img/descenso/d07-atarraya.webp" alt="Un pescador lanza una atarraya desde una canoa en el río ancho."></div>
+<div class="contenedor">
+  <article class="hito der" data-alt="220"><div class="tarjeta"><span class="alt">220 m · Periodo 1</span><h3>Quien canta, cuenta</h3><p class="preg">¿Quién consigue que su versión sea escuchada?</p><p class="obra">Corriente 1 de Caudal 10 · Comentario interpretativo y lectura dramatizada</p></div><figure class="ilus"><img src="img/descenso/d08-garza.webp" alt="Una garza blanca en la orilla entre juncos."></figure></article>
+  <article class="hito" data-alt="160"><div class="tarjeta"><span class="alt">160 m · Periodo 2</span><h3>Lo que se dice a media voz</h3><p class="preg">¿Cómo se dice lo que no se puede decir directamente?</p><p class="obra">Corriente 2 de Caudal 10 · Lectura comparada y caricatura o historieta</p></div><figure class="ilus"><img src="img/descenso/d11-iguana.webp" alt="Una iguana verde sobre una rama de ceiba encima del río."></figure></article>
+  <p class="susurro">Durante un buen trecho, las aguas no se mezclan: cada una conserva su color.</p>
+  <article class="hito der" data-alt="100"><div class="tarjeta"><span class="alt">100 m · Periodo 3</span><h3>Ver para contar</h3><p class="preg">¿Cómo cambia un hecho cuando lo cuentan la literatura, la ciencia y la opinión?</p><p class="obra">Corriente 3 de Caudal 10 · Dossier: explicación y columna</p></div><figure class="ilus"><img src="img/descenso/d12-hicotea.webp" alt="Dos hicoteas toman el sol sobre un tronco entre lirios de agua."></figure></article>
+  <article class="hito" data-alt="50"><div class="tarjeta"><span class="alt">50 m · Periodo 4</span><h3>Romper y sostener</h3><p class="preg">¿Cómo hacer visible una idea y sostenerla ante una objeción?</p><p class="obra">Corriente 4 de Caudal 10 · Infografía, ensayo y defensa oral</p></div><figure class="ilus" data-mov=flotar><img src="img/descenso/d13-martin-pescador.webp" alt="Un martín pescador se zambulle hacia el agua."></figure></article>
+</div>
+
+<!-- Tramo 3 -->
+<section class="zona" id="delta" data-alt="20" data-zona="Delta" data-fondo="#4F8A8B">
+  <div class="contenedor tramo-cabeza">
+    <div>
+      <p class="rotulo">Tramo 3 · Donde el río se abre al mar</p>
+      <h2>Delta</h2>
+      <p class="bajada">Caudal 11. Antes del mar, el río se abre en muchos brazos, y quien navega tiene que elegir. En once preguntas qué problema plantea un texto, qué evidencia lo sostiene y qué diría quien piensa lo contrario.</p>
+      <ul class="piezas"><li><a href="https://github.com/nestorfernando3/caudal">Libro del estudiante</a></li><li><a href="https://github.com/nestorfernando3/caudal">Guía docente</a></li><li><a href="https://github.com/nestorfernando3/caudal">Biblioteca del río</a></li><li><a href="https://github.com/nestorfernando3/caudal">Celular</a></li></ul>
+      <p class="indicacion">Toca el libro para darle la vuelta</p>
+    </div>
+    <div class="escena" data-libro="11" data-modo="tramo"></div>
+  </div>
+</section>
+<div class="panorama zona" data-alt="15" data-zona="Manglar" data-fondo="#2F6B70"><img class="flujo" src="img/caudal-11.jpg" data-pos="0.36" alt="Un río se abre en brazos entre manglares hasta el mar."></div>
+<div class="estampa" data-alt=14><img src="img/descenso/d09-manglar.webp" alt="Raíces de mangle rojo entran en el agua salobre."></div>
+<div class="contenedor">
+  <article class="hito" data-alt="12"><div class="tarjeta"><span class="alt">12 m · Periodo 1</span><h3>Mirar de frente</h3><p class="preg">¿Qué cuesta saber la verdad y quién decide lo que podemos saber?</p><p class="obra">Corriente 1 de Caudal 11 · Ensayo sobre un problema propio</p></div><figure class="ilus"><img src="img/descenso/d14-cangrejo-azul.webp" alt="Un cangrejo azul entre raíces de mangle."></figure></article>
+  <article class="hito der" data-alt="8"><div class="tarjeta"><span class="alt">8 m · Periodo 2</span><h3>Voces a contracorriente</h3><p class="preg">¿Qué hace persuasiva una voz que va contra la corriente y cómo juzgo sus razones?</p><p class="obra">Corriente 2 de Caudal 11 · Artículo de opinión con un expediente de fuentes</p></div><figure class="ilus"><img src="img/descenso/d15-ibis.webp" alt="Un ibis escarlata posado en raíces de mangle."></figure></article>
+  <p class="susurro">Cada brazo lleva la misma agua por un camino distinto.</p>
+  <article class="hito" data-alt="4"><div class="tarjeta"><span class="alt">4 m · Periodo 3</span><h3>El peso del medio</h3><p class="preg">¿Cuánto explica el medio de lo que somos y qué hace falta para sostener esa explicación?</p><p class="obra">Corriente 3 de Caudal 11 · Editorial desde un dossier</p></div><figure class="ilus"><img src="img/descenso/d16-manati.webp" alt="Un manatí nada en el agua verdosa de la ciénaga."></figure></article>
+  <article class="hito der" data-alt="1"><div class="tarjeta"><span class="alt">1 m · Periodo 4</span><h3>Cambiar de forma</h3><p class="preg">¿Cómo cambia lo que entendemos cuando cambian la forma, el medio y la selección?</p><p class="obra">Corriente 4 de Caudal 11 · Reseña comparativa y defensa breve</p></div><figure class="ilus" data-mov=flotar><img src="img/descenso/d17-sabalo.webp" alt="Un sábalo salta fuera del agua en la desembocadura."></figure></article>
+</div>
+<div class="estampa" data-mov=deriva><img src="img/descenso/d10-pelicanos.webp" alt="Una fila de pelícanos vuela sobre una ola que rompe."></div>
+
+<!-- Mar -->
+<section class="rutas zona" id="rutas" data-alt="0" data-zona="Mar abierto" data-fondo="#16303A">
+  <div class="contenedor">
+    <p class="rotulo">Tres maneras de remar</p>
+    <h2>Una misma lectura, tres rutas</h2>
+    <p class="intro">No todas las lecturas se recorren de la misma manera, y cada actividad lleva una etiqueta. Elegir un apoyo no te baja la nota; terminar una ampliación no te la sube sin la evidencia común. Lo que cuenta es que puedas mostrar cómo piensas. Este ejemplo es de <em>La Celestina</em>, en Caudal 10.</p>
+
+    <div class="selector" role="tablist" aria-label="Rutas de la actividad">
+      <button role="tab" id="t-cauce" aria-selected="true" aria-controls="r-cauce">Cauce · para todos</button>
+      <button role="tab" id="t-remo" aria-selected="false" aria-controls="r-remo" tabindex="-1">Remo · con apoyo</button>
+      <button role="tab" id="t-afluente" aria-selected="false" aria-controls="r-afluente" tabindex="-1">Afluente · para ir más lejos</button>
+    </div>
+
+    <div class="actividad">
+      <div>
+        <div class="ficha-ruta" id="r-cauce" role="tabpanel" aria-labelledby="t-cauce" style="--rc:#2C5A70">
+          <span class="etq">Cauce · para todos</span>
+          <h3>Lo que Celestina pide</h3>
+          <ol>
+            <li>Copia lo que Celestina pide en la intervención 2.</li>
+            <li>Copia lo que pide en la intervención 16.</li>
+            <li>Compara: ¿cuál es más fácil de conceder?</li>
+          </ol>
+          <p class="entregas"><strong>Entregas:</strong> las dos citas y cuatro líneas que expliquen por qué cambió la petición.</p>
+        </div>
+        <div class="ficha-ruta" id="r-remo" role="tabpanel" aria-labelledby="t-remo" style="--rc:#4E6B3A" hidden>
+          <span class="etq">Remo · con apoyo</span>
+          <h3>Mapa de la escena</h3>
+          <p>Hazlo antes de «Lo que Celestina pide» si necesitas ordenar la escena. Divide la escena en cuatro momentos: el halago, el nombre de Calisto, el enojo y la nueva petición. Junto a cada uno, escribe el número de la intervención donde empieza.</p>
+          <p class="entregas"><strong>Entregas:</strong> el mapa con cuatro momentos y sus números.</p>
+        </div>
+        <div class="ficha-ruta" id="r-afluente" role="tabpanel" aria-labelledby="t-afluente" style="--rc:#5B1D29" hidden>
+          <span class="etq">Afluente · para ir más lejos</span>
+          <h3>Lo que no se dice</h3>
+          <p>Celestina nunca dice «Calisto quiere conquistarte». Elige dos frases suyas en las que dice esa idea sin decirla y explica, en cinco líneas, qué gana con hablar así.</p>
+        </div>
+      </div>
+      <p class="nota-ruta" id="nota-ruta"><strong>Cauce:</strong> la ruta común. La recorre todo el grupo y produce la evidencia que se evalúa.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gratitud zona" id="agradecimientos" data-alt="0" data-zona="Mar abierto" data-fondo="#10242C">
+  <div class="contenedor">
+    <p class="rotulo">Agradecimientos</p>
+    <h2>Quienes abrieron el cauce</h2>
+    <div class="directivos">
+      <div><p class="nombre-grande">Breitner Piedrahita</p><p class="cargo">Rector de la IED Brisas del Río</p></div>
+      <div><p class="nombre-grande">Luis Nieto</p><p class="cargo">Coordinador de la IED Brisas del Río</p></div>
+    </div>
+    <p class="motivo">Por apoyar Caudal desde su concepción.</p>
+
+    <h3 class="sub">Estudiantes que evaluaron los libros</h3>
+    <p class="grupo">Caudal 9 · 8A</p>
+    <ul class="estudiantes">
+      <li>Mariana Lucía Becerra Becerra</li>
+      <li>Jossep Adel Díaz Leal</li>
+      <li>Oswald Daniel León Rodríguez</li>
+      <li>Eleanny Esmeralda Marín Ríos</li>
+      <li>Jamibel Karina Melean Valdez</li>
+      <li>Johan David Ruiz Hernández</li>
+    </ul>
+
+    <p class="aviso">Vendrán más estudiantes.</p>
+    <p class="aviso-sub">Esta orilla sigue abierta: cada año, nuevos lectores van a probar, evaluar y mejorar Caudal.</p>
+  </div>
+</section>
+</main>
+
+<footer class="zona" data-alt="0" data-zona="Mar abierto" data-fondo="#10242C">
+  <div class="contenedor">
+    <div><strong>Caudal</strong> · Serie de Lengua Castellana para 9.º, 10.º y 11.º<br>Autor: Néstor Fernando De León Llanos<br>IED Brisas del Río, Barranquilla, a orillas del Magdalena</div>
+    <div class="licencia">
+      <a class="cc-insignia" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="license" aria-label="Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional"><svg class="cc" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="4.5"/><path d="M28.5 26.5a7.5 7.5 0 1 0 0 11M46.5 26.5a7.5 7.5 0 1 0 0 11" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" transform="translate(-6 0)"/></svg><svg class="cc" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="4.5"/><circle cx="32" cy="17.5" r="4.6" fill="currentColor"/><path d="M24.5 25.5h15v14h-4v12h-7v-12h-4z" fill="currentColor"/></svg><svg class="cc" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="4.5"/><path d="M19.5 34a12.5 12.5 0 1 0 3.2-11.5" fill="none" stroke="currentColor" stroke-width="5"/><path d="M14 22.5l9.5 7 2.5-11.5z" fill="currentColor"/></svg></a>
+      <p>© 2026 Néstor Fernando De León Llanos. Los aportes originales del autor se publican bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="license">Creative Commons Atribución-CompartirIgual 4.0 Internacional</a>. La licencia no cubre los textos literarios de otros autores, que conservan su régimen. Ilustraciones interpretativas generadas con inteligencia artificial para Caudal. Tipografías Young Serif, Literata y Atkinson Hyperlegible bajo SIL Open Font License 1.1.</p>
+      <p><a href="https://github.com/nestorfernando3/caudal">github.com/nestorfernando3/caudal</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const QUIETO = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const LIBROS = {
+  9:  { sub: 'Cabeceras', grado: 'NOVENO', color: '#4E6B3A', ancla: '#cabeceras', bajada: 'Donde nace el río.',
+        corrientes: ['El corazón y el espejo', 'La selva que devora', 'Lo que dicen las palabras', 'Romper el molde'] },
+  10: { sub: 'Confluencias', grado: 'DÉCIMO', color: '#2C5A70', ancla: '#confluencias', bajada: 'Donde se juntan las aguas.',
+        corrientes: ['Quien canta, cuenta', 'Lo que se dice a media voz', 'Ver para contar', 'Romper y sostener'] },
+  11: { sub: 'Delta', grado: 'UNDÉCIMO', color: '#2A7A78', ancla: '#delta', bajada: 'Donde el río se abre al mar.',
+        corrientes: ['Mirar de frente', 'Voces a contracorriente', 'El peso del medio', 'Cambiar de forma'] }
+};
+
+// ---------- Libros en 3D: se arrastran para girar y se tocan para actuar ----------
+function armarLibro(escena, n, modo) {
+  const L = LIBROS[n];
+  escena.style.setProperty('--c', L.color);
+  escena.setAttribute('role', 'button');
+  escena.tabIndex = 0;
+  escena.setAttribute('aria-label', modo === 'estante' ? `Caudal ${n}, ${L.sub}: bajar a su tramo del río` : `Caudal ${n}, ${L.sub}: dar la vuelta al libro`);
+  escena.innerHTML = `
+    <div class="libro">
+      <div class="cara frente"><img src="img/caudal-${n}.jpg" alt="" draggable="false">
+        <span class="t1">CAUDAL</span><span class="t2">${n}</span><span class="t3">${L.sub}</span>
+        <span class="t4"><span>LENGUA CASTELLANA</span><span>GRADO ${n}</span></span></div>
+      <div class="cara dorso"><h4>${L.sub}</h4><p>${L.bajada} Cuatro corrientes, una por periodo:</p>
+        <ol>${L.corrientes.map(c => `<li>${c}</li>`).join('')}</ol></div>
+      <div class="cara lomo"><span>CAUDAL ${n} · ${L.sub}</span></div>
+      <div class="cara cantos"></div><div class="cara arriba"></div><div class="cara abajo"></div>
+    </div><div class="sombra"></div>${modo === 'estante' ? `<span class="nombre">${L.sub}</span>` : ''}`;
+
+  const libro = escena.querySelector('.libro');
+  const frente = escena.querySelector('.frente');
+  const reposo = modo === 'estante' ? 30 : 26;
+  const s = { ry: reposo, rx: 0, vy: 0, objetivoX: 0, arrastre: false, movio: false, x0: 0, y0: 0, ultX: 0, vuelta: 0, extra: 0 };
+  let flotar = Math.random() * 6;
+
+  function accion() {
+    if (modo === 'estante') document.querySelector(L.ancla).scrollIntoView({ behavior: QUIETO ? 'auto' : 'smooth' });
+    else { s.vuelta = s.vuelta ? 0 : 180; }
+  }
+  escena.addEventListener('pointerdown', e => {
+    s.arrastre = true; s.movio = false; s.x0 = s.ultX = e.clientX; s.y0 = e.clientY; s.vy = 0;
+    escena.setPointerCapture(e.pointerId);
+  });
+  escena.addEventListener('pointermove', e => {
+    const r = escena.getBoundingClientRect();
+    if (!s.arrastre) { s.objetivoX = ((e.clientY - r.top) / r.height - .5) * -14; return; }
+    const dx = e.clientX - s.ultX; s.ultX = e.clientX;
+    if (Math.abs(e.clientX - s.x0) > 6) s.movio = true;
+    s.ry += dx * .6; s.vy = dx * .6;
+  });
+  const soltar = () => { if (!s.arrastre) return; s.arrastre = false; if (!s.movio) accion(); };
+  escena.addEventListener('pointerup', soltar);
+  escena.addEventListener('pointercancel', () => { s.arrastre = false; });
+  escena.addEventListener('pointerleave', () => { if (!s.arrastre) s.objetivoX = 0; });
+  escena.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); accion(); } });
+
+  return function cuadro(t) {
+    // En los tramos, el libro gira un poco según el lugar de la página.
+    if (modo === 'tramo') {
+      const r = escena.getBoundingClientRect();
+      const p = (r.top + r.height / 2) / innerHeight - .5;
+      s.extra = p * -50;
+    }
+    const meta = reposo + s.vuelta + s.extra;
+    if (!s.arrastre) {
+      s.ry += s.vy; s.vy *= .94;
+      if (Math.abs(s.vy) < .3) {
+        // Vuelve al reposo por el camino más corto.
+        const d = ((s.ry - meta) % 360 + 540) % 360 - 180;
+        s.ry -= d * .07;
+      }
+    }
+    s.rx += (s.objetivoX - s.rx) * .08;
+    flotar += .016;
+    const y = QUIETO ? 0 : Math.sin(flotar) * 6;
+    libro.style.transform = `translateY(${y}px) rotateX(${s.rx + 6}deg) rotateY(${s.ry}deg)`;
+    frente.style.setProperty('--brillo', `${(((s.ry % 360) + 360) % 360 > 180 ? -1 : 1) * Math.sin(s.ry * Math.PI / 180) * -140}%`);
+  };
+}
+
+const cuadros = [];
+const estante = document.getElementById('estante');
+[9, 10, 11].forEach(n => { const e = document.createElement('div'); e.className = 'escena'; estante.appendChild(e); cuadros.push(armarLibro(e, n, 'estante')); });
+document.querySelectorAll('.escena[data-modo="tramo"]').forEach(e => cuadros.push(armarLibro(e, +e.dataset.libro, 'tramo')));
+(function animar(t) { cuadros.forEach(f => f(t)); requestAnimationFrame(animar); })();
+
+// ---------- Descenso: altímetro y color del agua según la altura ----------
+(() => {
+  const marcas = [...document.querySelectorAll('[data-alt]')];
+  const num = document.getElementById('alt-num'), zona = document.getElementById('alt-zona');
+  const raiz = document.documentElement.style;
+  let puntos = [];
+  const hex = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+  function medir() {
+    let fondo = '#F4EDE1', nombre = 'Páramo';
+    puntos = marcas.map(m => {
+      fondo = m.dataset.fondo || fondo; nombre = m.dataset.zona || nombre;
+      const r = m.getBoundingClientRect();
+      return { y: r.top + scrollY + r.height / 2, alt: +m.dataset.alt, fondo: hex(fondo), zona: nombre };
+    });
+  }
+  function actualizar() {
+    const ref = scrollY + innerHeight * .5;
+    let i = 0;
+    while (i < puntos.length - 2 && puntos[i + 1].y <= ref) i++;
+    const a = puntos[i], b = puntos[i + 1];
+    const t = Math.max(0, Math.min(1, (ref - a.y) / Math.max(1, b.y - a.y)));
+    const alt = Math.max(0, Math.round(a.alt + (b.alt - a.alt) * t));
+    num.textContent = alt.toLocaleString('es-CO'); window.ALTITUD = alt;
+    zona.textContent = (t > .5 ? b : a).zona;
+    const c = a.fondo.map((v, k) => Math.round(v + (b.fondo[k] - v) * t));
+    raiz.setProperty('--fondo', `rgb(${c})`);
+    const luz = (c[0] * .299 + c[1] * .587 + c[2] * .114) / 255;
+    raiz.setProperty('--tx', luz < .5 ? '#F4EDE1' : '#1F2A30');
+    raiz.setProperty('--tx2', luz < .5 ? '#C9D6D4' : '#4A5452');
+  }
+  medir(); actualizar();
+  addEventListener('scroll', actualizar, { passive: true });
+  addEventListener('resize', () => { medir(); actualizar(); });
+  addEventListener('load', () => { medir(); actualizar(); });
+  new ResizeObserver(() => { medir(); actualizar(); }).observe(document.body); // las imágenes diferidas cambian la altura
+  const obs = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('visible')), { threshold: 0, rootMargin: '0px 0px -12% 0px' });
+  document.querySelectorAll('.hito').forEach(h => obs.observe(h));
+})();
+
+// ---------- Flujo: las imágenes se curvan y se barren con la velocidad del desplazamiento ----------
+(() => {
+  if (QUIETO) return;
+  const lienzo = document.getElementById('flujo');
+  const gl = lienzo.getContext('webgl', { alpha: true, premultipliedAlpha: false, antialias: true });
+  if (!gl) return;
+  const vs = `
+    precision mediump float;
+    attribute vec2 aUv;
+    uniform vec4 uRect; uniform vec2 uView; uniform float uVel;
+    varying vec2 vUv;
+    void main() {
+      vec2 p = uRect.xy + aUv * uRect.zw;
+      float arco = sin(aUv.x * 3.14159);
+      p.y += arco * uVel * uRect.w * 0.09;                // la lámina se arquea como tela
+      p.x += (aUv.x - 0.5) * uRect.z * abs(uVel) * -0.06;  // y se estrecha al acelerar
+      p.y += (aUv.y - 0.5) * uRect.w * abs(uVel) * 0.04;
+      vec2 c = p / uView * 2.0 - 1.0;
+      gl_Position = vec4(c.x, -c.y, 0.0, 1.0);
+      vUv = aUv;
+    }`;
+  const fs = `
+    precision mediump float;
+    uniform sampler2D uTex; uniform vec4 uCover; uniform float uVel; uniform vec2 uTam;
+    varying vec2 vUv;
+    void main() {
+      vec2 uv = vUv * uCover.xy + uCover.zw;
+      float s = min(abs(uVel), 1.0) * 0.07;
+      vec3 col = vec3(0.0);
+      for (int i = -5; i <= 5; i++) {
+        float k = float(i) / 5.0;
+        vec2 o = vec2(k * s, k * s * 0.15);
+        col.r += texture2D(uTex, uv + o + vec2(s * 0.25, 0.0)).r;
+        col.g += texture2D(uTex, uv + o).g;
+        col.b += texture2D(uTex, uv + o - vec2(s * 0.25, 0.0)).b;
+      }
+      col /= 11.0;
+      // esquinas redondeadas de 6 px
+      vec2 px = vUv * uTam; vec2 q = min(px, uTam - px);
+      float r = 6.0; float a = 1.0;
+      if (q.x < r && q.y < r) a = 1.0 - smoothstep(r - 1.0, r, length(vec2(r) - q));
+      gl_FragColor = vec4(col, a);
+    }`;
+  function sombreador(tipo, src) { const s = gl.createShader(tipo); gl.shaderSource(s, src); gl.compileShader(s); return s; }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, sombreador(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, sombreador(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) return;
+  gl.useProgram(prog);
+
+  // Malla de 32 × 32 para que la curva sea suave.
+  const N = 32, uvs = [], idx = [];
+  for (let y = 0; y <= N; y++) for (let x = 0; x <= N; x++) uvs.push(x / N, y / N);
+  for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) { const a = y * (N + 1) + x, b = a + 1, c = a + N + 1, d = c + 1; idx.push(a, c, b, b, c, d); }
+  const bufUv = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, bufUv); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(uvs), gl.STATIC_DRAW);
+  const bufIdx = gl.createBuffer(); gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, bufIdx); gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(idx), gl.STATIC_DRAW);
+  const aUv = gl.getAttribLocation(prog, 'aUv'); gl.enableVertexAttribArray(aUv); gl.vertexAttribPointer(aUv, 2, gl.FLOAT, false, 0, 0);
+  const U = n => gl.getUniformLocation(prog, n);
+  const uRect = U('uRect'), uView = U('uView'), uVel = U('uVel'), uCover = U('uCover'), uTam = U('uTam');
+  gl.enable(gl.BLEND); gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+
+  const planos = [];
+  document.querySelectorAll('img.flujo').forEach(img => {
+    const cargar = () => {
+      const tex = gl.createTexture();
+      gl.bindTexture(gl.TEXTURE_2D, tex);
+      try { gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img); }
+      catch (e) { return; } // p. ej. abierto como archivo local: se queda la imagen normal
+      if (gl.getError()) return;
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      planos.push({ img, tex, ia: img.naturalWidth / img.naturalHeight, pos: +(img.dataset.pos || .5) });
+      img.classList.add('gl');
+    };
+    if (img.complete && img.naturalWidth) cargar(); else img.addEventListener('load', cargar, { once: true });
+  });
+
+  let ultimo = scrollY, vel = 0, dpr = 1;
+  function medir() {
+    dpr = Math.min(devicePixelRatio || 1, 1.5);
+    lienzo.width = innerWidth * dpr; lienzo.height = innerHeight * dpr;
+    gl.viewport(0, 0, lienzo.width, lienzo.height);
+  }
+  medir(); addEventListener('resize', medir);
+
+  (function dibujar() {
+    const d = Math.max(-90, Math.min(90, scrollY - ultimo)); ultimo = scrollY;
+    vel += (d - vel) * .1;
+    const v = Math.max(-1, Math.min(1, vel / 45));
+    gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.uniform2f(uView, innerWidth, innerHeight);
+    gl.uniform1f(uVel, v);
+    for (const p of planos) {
+      const r = p.img.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > innerHeight + 200) continue;
+      const ra = r.width / r.height;
+      let sx = 1, sy = 1, ox = 0, oy = 0;
+      if (p.ia > ra) { sx = ra / p.ia; ox = (1 - sx) * .5; } else { sy = p.ia / ra; oy = (1 - sy) * p.pos; }
+      gl.bindTexture(gl.TEXTURE_2D, p.tex);
+      gl.uniform4f(uRect, r.left, r.top, r.width, r.height);
+      gl.uniform4f(uCover, sx, sy, ox, oy);
+      gl.uniform2f(uTam, r.width, r.height);
+      gl.drawElements(gl.TRIANGLES, idx.length, gl.UNSIGNED_SHORT, 0);
+    }
+    requestAnimationFrame(dibujar);
+  })();
+})();
+
+// ---------- Ilustraciones: aparecen, se desplazan con paralaje y algunas se mueven solas ----------
+(() => {
+  const obs = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('visible')), { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.estampa').forEach(e => obs.observe(e));
+  if (QUIETO) return;
+  const imgs = [...document.querySelectorAll('.ilus img, .estampa img')];
+  (function mover(t) {
+    for (const img of imgs) {
+      const r = img.getBoundingClientRect();
+      if (r.bottom < -100 || r.top > innerHeight + 100) continue;
+      const p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
+      const mov = img.parentElement.dataset.mov;
+      let py = p * -60, dx = 0;
+      if (mov === 'flotar') py += Math.sin(t / 420) * 8;
+      if (mov === 'deriva') dx = p * -140;
+      img.style.setProperty('--py', py.toFixed(1) + 'px');
+      img.style.setProperty('--dx', dx.toFixed(1) + 'px');
+    }
+    requestAnimationFrame(mover);
+  })(0);
+})();
+
+// ---------- Rutas ----------
+(() => {
+  const botones = [...document.querySelectorAll('.selector [role=tab]')];
+  const nota = document.getElementById('nota-ruta');
+  const notas = {
+    't-cauce': '<strong>Cauce:</strong> la ruta común. La recorre todo el grupo y produce la evidencia que se evalúa.',
+    't-remo': '<strong>Remo:</strong> cambia cómo llegas a la tarea, no lo que se te pide; aquí, un mapa de la escena antes de empezar. Con apoyo puedes alcanzar la nota máxima.',
+    't-afluente': '<strong>Afluente:</strong> una ampliación opcional para ir más lejos.'
+  };
+  function elegir(b) {
+    botones.forEach(x => {
+      const sel = x === b;
+      x.setAttribute('aria-selected', sel); x.tabIndex = sel ? 0 : -1;
+      const panel = document.getElementById(x.getAttribute('aria-controls'));
+      panel.hidden = !sel;
+      if (sel) { panel.classList.remove('entra'); void panel.offsetWidth; panel.classList.add('entra'); }
+    });
+    nota.innerHTML = notas[b.id];
+  }
+  botones.forEach((b, i) => {
+    b.addEventListener('click', () => elegir(b));
+    b.addEventListener('keydown', e => {
+      const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (d) { const s = botones[(i + d + botones.length) % botones.length]; s.focus(); elegir(s); }
+    });
+  });
+})();
+</script>
+<script src="js/sonido.js"></script>
+<script src="js/rio.js"></script>
+<script type="module" src="js/remanso3d.js"></script>
+</body>
+</html>
