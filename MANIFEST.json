@@ -1,6 +1,6 @@
 {
-  "version": "0.2.0",
-  "fecha": "2026-11-02",
+  "version": "0.3.0",
+  "fecha": "2026-11-03",
   "estado": "proyecto-en-curso",
   "archivos": [
     {
@@ -10,13 +10,13 @@
     },
     {
       "archivo": "CHANGELOG.md",
-      "bytes": 2088,
-      "sha256": "3ce50bc1578d3325c502597bdb33af5e9c612fb82237afb60d06c64a10110aea"
+      "bytes": 2866,
+      "sha256": "b6e579b5e0a9404ea0899f1135ed918b762f5bc3e8121314cc16eb10b0edc67b"
     },
     {
       "archivo": "CITATION.cff",
       "bytes": 728,
-      "sha256": "de0b700291ebffaa7417ebc2d10ea70b53ae3f15cfcf63ae6ae3aa90738e19d6"
+      "sha256": "4e5eb10dc3e9c122c40f844131e6eb0090cc1dd3ee50815be4242a06a5434c0d"
     },
     {
       "archivo": "DERECHOS.md",
@@ -30,23 +30,23 @@
     },
     {
       "archivo": "README.md",
-      "bytes": 10384,
-      "sha256": "9c52265b25c8f0817ebb33d5caa4aa684ec5413f916e0efa83c6f5b33a56ecf8"
+      "bytes": 10399,
+      "sha256": "747290cb3ef4ba4daa86b8ebaf5ba90959f44a7d93e94fd378c8424cdc7345a9"
     },
     {
       "archivo": "docs/BITACORA.md",
-      "bytes": 14707,
-      "sha256": "b66b1fc866ef8f3cee9c574ae53acff04ddac08fa7b10051cf1ce1ff9ed5c1bb"
+      "bytes": 16105,
+      "sha256": "b8bd9ad2a0a22d5e64df3e5fdb58b77554e1bf5994117ab93ee90240516ff86d"
     },
     {
       "archivo": "docs/CATALOGO.json",
       "bytes": 8559,
-      "sha256": "dccba40243327c968c7fc237e797c38218c1931587ac984c60efec3f9b2b6e3d"
+      "sha256": "e14c1aa98cd87050afed069d948f6eea8f72da401a0d89638e1af35d3196709e"
     },
     {
       "archivo": "docs/CATALOGO.md",
       "bytes": 4201,
-      "sha256": "a18c962aaf2ac4fe6ae50e3df7592d06c8a2644842d05b921c9f01d5a8d1e105"
+      "sha256": "4fbccff91bcbf388c78c558eae308c3fa2f24c7e8afff9e5be9bcca344a360e3"
     },
     {
       "archivo": "docs/INVESTIGACION.md",
@@ -55,18 +55,18 @@
     },
     {
       "archivo": "docs/imagenes/caudal-10-portada.png",
-      "bytes": 487150,
-      "sha256": "5fbe5c9acac2bdf839485cff7cbd7d5248653e9c1c2fffc732d76bc57e660c3f"
+      "bytes": 829426,
+      "sha256": "65b887fffcb3a2c8b9a92145b625f31c9d4f2c07415a817c951a9ecc0dd8692a"
     },
     {
       "archivo": "docs/imagenes/caudal-11-portada.png",
-      "bytes": 286126,
-      "sha256": "978c3edc1439f72928c2766ba4643c74c4952380d4e5b6537284fc5e6a9b9a17"
+      "bytes": 856152,
+      "sha256": "920ee44eade6ee51286e814331ad75de440d622e625474e213ec29763f835565"
     },
     {
       "archivo": "docs/imagenes/caudal-9-portada.png",
-      "bytes": 314294,
-      "sha256": "5b725056ed89cf3870b2a8dfcea1b9ec8c80d7c0b159048e46fe3360f4573877"
+      "bytes": 848906,
+      "sha256": "065bd5591b9825614019a66a70dd7354d04e8919c3664e7fbd6ec5d7b98c6ad9"
     },
     {
       "archivo": "recursos/arte-original/c10-a.png",

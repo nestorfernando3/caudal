@@ -58,6 +58,12 @@ El autor también notó que el diseño de décimo estaba mejor resuelto, y noven
 
 Con todo esto, *Caudal 9* tiene 222 páginas, dos más que la meta. El autor decidió conservarlas: las dos páginas son las actividades nuevas, y quitarlas habría significado quitar justamente lo que pidieron los estudiantes.
 
+## Sexto momento: una misma cara para la serie
+
+Faltaba que los tres libros se reconocieran como una familia. Entre las propuestas visuales que se habían preparado para décimo y once, el autor eligió las portadas de grabado y acuarela, una por grado, y descartó las demás opciones. Noveno no tenía la suya: se preparó en el mismo estilo una ilustración de las *cabeceras*, los arroyos que nacen en la Sierra Nevada de Santa Marta y bajan hasta un libro abierto, y otra para su guía docente, con un objeto por corriente: un espejo y una pluma, una hoja de caucho, un altavoz con su cartel y papeles recortados. Así, el río de la serie nace en noveno, se junta con otros en décimo y se abre en delta en once.
+
+Por dentro, cada momento de una corriente abre ahora con un encabezado propio: un icono (la gota del Nacimiento, los globos de Dialogar, el libro abierto de Leer la corriente, el bolígrafo de Transformar), el número del momento, su título y una frase que dice para qué sirve, como «Escuchar y poner ideas en común» o «Interpretar con evidencia». El índice de cada corriente dejó de ser una tabla y se volvió un conjunto de tarjetas con el mismo icono y la página. Al revisar estos cambios apareció un error que nadie había notado: las guías docentes de noveno y décimo se imprimían reducidas, con la letra más pequeña de lo previsto. Ya salen a su tamaño.
+
 ## Lo que cambió en décimo y once
 
 La consulta de 8A no se quedó en noveno. De ella vino, por ejemplo, la opción de un video de dos minutos para el dossier de la tercera corriente de décimo, con la misma condición de no reemplazar la evidencia escrita. Décimo tiene además una guía docente completa en PDF, con los DBA corregidos como los de noveno, una voz de la orilla en la corriente que no la tenía y una carta de cierre, «Para mi yo de once». En once se reescribieron 24 justificaciones de la clave del simulacro, que descartaban por error la opción correcta o nombraban mal las demás, y la *Biblioteca del río 11* dejó de repetir las lecturas del libro: hoy trae obras que el libro solo muestra en parte, como *Edipo rey* completo y el canto XXIV de la *Ilíada*. Los tres libros comparten ahora un mismo sistema de diseño y los mismos controles de calidad.
