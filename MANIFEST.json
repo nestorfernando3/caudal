@@ -10,8 +10,8 @@
     },
     {
       "archivo": "CHANGELOG.md",
-      "bytes": 831,
-      "sha256": "6fdf9ca996d373141d77ae77715615e0e0c8d16a9e6aeab0b3a3aecd3fec8fcd"
+      "bytes": 1851,
+      "sha256": "e2db1884e1cb7387a192405a6867c8a88e33a269b330099d22e52cc88a186b23"
     },
     {
       "archivo": "CITATION.cff",
@@ -30,8 +30,13 @@
     },
     {
       "archivo": "README.md",
-      "bytes": 9545,
-      "sha256": "1747d629a156d0d6be1e14ede78aa87f9658024d527707424f50d603f9bbd044"
+      "bytes": 9776,
+      "sha256": "d32884d7ab12f9e950b218a46aaf5ca8882397e5ad7fe916c8ac84baf692719c"
+    },
+    {
+      "archivo": "docs/BITACORA.md",
+      "bytes": 15000,
+      "sha256": "1f7d464468fd494ba0e16658bc59dde4346c77856c5e2017d7f57b3c757897d2"
     },
     {
       "archivo": "docs/CATALOGO.json",

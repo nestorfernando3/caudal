@@ -8,7 +8,7 @@
 
 Proyecto en curso · v0.1.0 · Barranquilla, Colombia
 
-[Libros y descargas](#libros-y-descargas) · [Recursos para el aula](#recursos-para-el-aula) · [Investigación](#un-proyecto-en-construcción) · [Licencia](DERECHOS.md)
+[Libros y descargas](#libros-y-descargas) · [Recursos para el aula](#recursos-para-el-aula) · [Investigación](#un-proyecto-en-construcción) · [Bitácora](docs/BITACORA.md) · [Licencia](DERECHOS.md)
 
 </div>
 
@@ -84,6 +84,8 @@ El [ZIP de recursos](https://github.com/nestorfernando3/caudal/releases/download
 Caudal se vincula con el trabajo doctoral del autor sobre la cocreación de experiencias de aprendizaje, las decisiones de los jóvenes y sus relaciones con el docente, los compañeros y las actividades. La colección ofrece materiales sobre los que leer, discutir, proponer y revisar en conjunto.
 
 Esta publicación documenta un proyecto pedagógico en curso. Los materiales disponibles permiten conocer su diseño; los resultados de investigación se comunicarán a través de sus productos académicos. El repositorio público no contiene datos personales ni respuestas individuales de estudiantes. Los decks y las presentaciones de trabajo se conservan en un archivo privado.
+
+La [bitácora de la serie](docs/BITACORA.md) cuenta, paso a paso y en lenguaje sencillo, cómo cambiaron los libros a partir de lo que propusieron los estudiantes y qué decisiones tomó el autor.
 
 [Conocer el vínculo con la investigación y la trazabilidad de versiones](docs/INVESTIGACION.md).
 
