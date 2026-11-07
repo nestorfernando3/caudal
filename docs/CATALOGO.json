@@ -4,210 +4,210 @@
     "archivo": "caudal-9-biblioteca-del-rio.pdf",
     "paginas": 466,
     "bytes": 11887006,
-    "sha256": "f6da8eaf7af9bb3e596b568db0af1fc87b603cc573f90c8fdd164d034f99276a",
+    "sha256": "47b2741a056d33337cb432cbd123a3bf77b14d2f2e18bca9cb720abecba06351",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-9-biblioteca-del-rio.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-9-biblioteca-del-rio.pdf"
   },
   {
     "grado": 9,
     "archivo": "caudal-9-corriente-1-el-corazon-y-el-espejo.pdf",
     "paginas": 50,
-    "bytes": 27720091,
-    "sha256": "ee22da46d3676f0b7948809c667962263048869d3d283d20e582980328f34a71",
+    "bytes": 27741987,
+    "sha256": "5a985aa1cf7a266618170ae09942cbeb1a27ad13b8983c8f238d014ed95bb99e",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-9-corriente-1-el-corazon-y-el-espejo.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-9-corriente-1-el-corazon-y-el-espejo.pdf"
   },
   {
     "grado": 9,
     "archivo": "caudal-9-corriente-2-la-selva-que-devora.pdf",
     "paginas": 55,
-    "bytes": 24953870,
-    "sha256": "4006b5a1a62e6d7b75d29178fc580fcaba1e55292837bf9320acca1ae57bea8d",
+    "bytes": 24965007,
+    "sha256": "d60be9e45360e93a0436dcc00d20f627d27365b0e680f28c53189c7fe603eea8",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-9-corriente-2-la-selva-que-devora.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-9-corriente-2-la-selva-que-devora.pdf"
   },
   {
     "grado": 9,
     "archivo": "caudal-9-corriente-3-lo-que-dicen-las-palabras.pdf",
-    "paginas": 47,
-    "bytes": 30957262,
-    "sha256": "c408f8c53bb7e0a34075fbf46709008bd0f87d3812aa7a43b618f32a6828abc3",
+    "paginas": 46,
+    "bytes": 30958784,
+    "sha256": "66fc3c4f23e40ed0ccd448d933ff8ee2c83fddd6dd02908a7da3493c23d85c41",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-9-corriente-3-lo-que-dicen-las-palabras.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-9-corriente-3-lo-que-dicen-las-palabras.pdf"
   },
   {
     "grado": 9,
     "archivo": "caudal-9-corriente-4-romper-el-molde.pdf",
-    "paginas": 45,
-    "bytes": 23530210,
-    "sha256": "ca08eb0b4019bb660f737db9f785b49eca18547f6e763d42d822a934935e0f12",
+    "paginas": 46,
+    "bytes": 23552510,
+    "sha256": "b182b7b5d51378ea2c4d7ffba1e75251b88554dcde3f3a3d2d380d59a16c46b7",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-9-corriente-4-romper-el-molde.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-9-corriente-4-romper-el-molde.pdf"
   },
   {
     "grado": 9,
     "archivo": "caudal-9-guia-docente.pdf",
     "paginas": 67,
     "bytes": 5509093,
-    "sha256": "338bb33ddaec38c0177d3e7417f2effe915b6229be5b75f0ba620be9b7b78a41",
+    "sha256": "b5681bb912667c06e3cc9cd0683836fe1b5f999943aa91a6f8b8f9ced49dad1e",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-9-guia-docente.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-9-guia-docente.pdf"
   },
   {
     "grado": 9,
     "archivo": "caudal-9-libro-del-estudiante.pdf",
     "paginas": 224,
-    "bytes": 82434070,
-    "sha256": "0082700fc58a310387d1ae9199d9465b12c864bf7aeefd53d21b73bc0348670a",
+    "bytes": 82501327,
+    "sha256": "ffc8351294b57f0bfc40a20e29d4fedd24aa79c3fc03821d318808a95c510820",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-9-libro-del-estudiante.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-9-libro-del-estudiante.pdf"
   },
   {
     "grado": 10,
     "archivo": "caudal-10-biblioteca-del-rio.pdf",
     "paginas": 112,
     "bytes": 5660038,
-    "sha256": "5fc9adc2547f4e5b9fcaec6341866b4397e365f2f535395aac304054781cc28a",
+    "sha256": "44da0c75cacfc4008c2da96c18b2426e6b2633a2832c6735af6f18fa5b2220c9",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-10-biblioteca-del-rio.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-10-biblioteca-del-rio.pdf"
   },
   {
     "grado": 10,
     "archivo": "caudal-10-corriente-1-quien-canta-cuenta.pdf",
-    "paginas": 19,
-    "bytes": 7331006,
-    "sha256": "2ff604a9270c1f7ed4d69713114f943a9ba15973bc4fbf8c4f561ddeb3abf61b",
+    "paginas": 18,
+    "bytes": 7341034,
+    "sha256": "a5e149d2d3cef9eac39ee018b0986d74bfee2028ffaacc6d173fcc641c39738a",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-10-corriente-1-quien-canta-cuenta.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-10-corriente-1-quien-canta-cuenta.pdf"
   },
   {
     "grado": 10,
     "archivo": "caudal-10-corriente-2-lo-que-se-dice-a-media-voz.pdf",
-    "paginas": 26,
-    "bytes": 11938478,
-    "sha256": "452467f79b28319f0a20b9a2303238b212e7a3422b0985382dfd0c2f455e3410",
+    "paginas": 29,
+    "bytes": 11970596,
+    "sha256": "704b0796e83d744b9a6910b73235b28640fd40a734e6747f2237182d03be344d",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-10-corriente-2-lo-que-se-dice-a-media-voz.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-10-corriente-2-lo-que-se-dice-a-media-voz.pdf"
   },
   {
     "grado": 10,
     "archivo": "caudal-10-corriente-3-ver-para-contar.pdf",
     "paginas": 26,
-    "bytes": 6966346,
-    "sha256": "f676f172c28957b29bf2593139cb125db25989381728a328407b38582a7555a1",
+    "bytes": 6982796,
+    "sha256": "7e8b511f9af213434635ba85bc5c197676852be407ba92e52caa2da1b1bea1f7",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-10-corriente-3-ver-para-contar.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-10-corriente-3-ver-para-contar.pdf"
   },
   {
     "grado": 10,
     "archivo": "caudal-10-corriente-4-romper-y-sostener.pdf",
-    "paginas": 19,
-    "bytes": 8421574,
-    "sha256": "be71b1b99a90f69027eecc10d8b55bf556e8fb2645c9825e54e1a9779e9fb90b",
+    "paginas": 20,
+    "bytes": 8436460,
+    "sha256": "914928d4cb1ff98902031296aa5d7ded6def4322f8fddb428ffba6f658347dc5",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-10-corriente-4-romper-y-sostener.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-10-corriente-4-romper-y-sostener.pdf"
   },
   {
     "grado": 10,
     "archivo": "caudal-10-guia-docente.pdf",
     "paginas": 35,
     "bytes": 4471798,
-    "sha256": "096a3b25a173654aa10248a61c9bd50305c5fdc89361ea912541fa1970fb1c1f",
+    "sha256": "04178d12886ce8ff3c190a845f7f649b8dce6731876ed77e28f1e7beba40c458",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-10-guia-docente.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-10-guia-docente.pdf"
   },
   {
     "grado": 10,
     "archivo": "caudal-10-libro-del-estudiante.pdf",
-    "paginas": 112,
-    "bytes": 35503691,
-    "sha256": "ebb9b57393b5393fffac0a0753d39558c861cb80015c082a9bad894a25514620",
+    "paginas": 117,
+    "bytes": 35573259,
+    "sha256": "c503dd14adcf2868408e78c7c3656fff56665f125ca903619f3766cf92b643fb",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-10-libro-del-estudiante.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-10-libro-del-estudiante.pdf"
   },
   {
     "grado": 11,
     "archivo": "caudal-11-biblioteca-del-rio.pdf",
     "paginas": 51,
     "bytes": 4174428,
-    "sha256": "a78b99b20b7b6ce9488c75936192b20983cd92d0f5df213e8e3b72e23aba194c",
+    "sha256": "1a2fe1ff4be7bcff6669b7759864c8034c72a9affb582f6d7345632e32bafc95",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-11-biblioteca-del-rio.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-11-biblioteca-del-rio.pdf"
   },
   {
     "grado": 11,
     "archivo": "caudal-11-corriente-1-mirar-de-frente.pdf",
     "paginas": 40,
-    "bytes": 15996064,
-    "sha256": "c264c2d528c4f81aa69d13c119a6195f5eed769800821aec09b502ae74fcee79",
+    "bytes": 16023073,
+    "sha256": "989063e4b031abc5248dd7e5b2198c15405fbf485d365c1074681322ea88e058",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-11-corriente-1-mirar-de-frente.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-11-corriente-1-mirar-de-frente.pdf"
   },
   {
     "grado": 11,
     "archivo": "caudal-11-corriente-2-voces-a-contracorriente.pdf",
     "paginas": 33,
-    "bytes": 12358403,
-    "sha256": "21b81512571111a638dbe313b54da7286336a0aeeca3414b8d4e529ad1fa4692",
+    "bytes": 12366334,
+    "sha256": "f4373487e44700a4c3cd31332bc687af25a15cd7a49ac9e3ff7e4a4d02cce44d",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-11-corriente-2-voces-a-contracorriente.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-11-corriente-2-voces-a-contracorriente.pdf"
   },
   {
     "grado": 11,
     "archivo": "caudal-11-corriente-3-el-peso-del-medio.pdf",
-    "paginas": 36,
-    "bytes": 15658019,
-    "sha256": "f88532a5d3e6aeae7ffea84d3511e9ebcd2be790aea8f43e522dd8f4611c4cb8",
+    "paginas": 35,
+    "bytes": 15672858,
+    "sha256": "d80cac6539c27bccc933e3a265a1471199ade669e5cccd3ff184962fddeda4d4",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-11-corriente-3-el-peso-del-medio.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-11-corriente-3-el-peso-del-medio.pdf"
   },
   {
     "grado": 11,
     "archivo": "caudal-11-corriente-4-cambiar-de-forma.pdf",
     "paginas": 31,
-    "bytes": 14401782,
-    "sha256": "72f66c94d1d5683b5137a54d0e2b788e3cdf9b9710a1dd317ecb5be8ce4f9db8",
+    "bytes": 14406103,
+    "sha256": "4e5c90184e12d0ee297080bc6e5648d5ce1948a6ffc0f707cdc2bec59859fd7a",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-11-corriente-4-cambiar-de-forma.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-11-corriente-4-cambiar-de-forma.pdf"
   },
   {
     "grado": 11,
     "archivo": "caudal-11-guia-docente.pdf",
     "paginas": 55,
     "bytes": 4680332,
-    "sha256": "ed2d7cbcc1b9310301e3287b361cd59e7ade8ca97f775728cd4970294a85cd40",
+    "sha256": "d8bb225dabb6864f1353460550018a15d9efeba1c3ca8b8caba456a4bb6dfaaa",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-11-guia-docente.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-11-guia-docente.pdf"
   },
   {
     "grado": 11,
     "archivo": "caudal-11-libro-del-estudiante.pdf",
-    "paginas": 172,
-    "bytes": 61347349,
-    "sha256": "aea4e694f106cf0fcb75a0203535dbffcd02a29782a4e3b891189c98c49c8733",
+    "paginas": 171,
+    "bytes": 61402353,
+    "sha256": "16433c5ba94a783540857d2f401264feec7ce7ad265a5a284c9e883ce224b966",
     "acceso": "publico",
     "tipo": "base",
-    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.3.0/caudal-11-libro-del-estudiante.pdf"
+    "url": "https://github.com/nestorfernando3/caudal/releases/download/v0.4.0/caudal-11-libro-del-estudiante.pdf"
   },
   {
     "grado": 10,
