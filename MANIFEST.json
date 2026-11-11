@@ -1,6 +1,6 @@
 {
-  "version": "0.4.0",
-  "fecha": "2026-11-07",
+  "version": "0.5.0",
+  "fecha": "2026-11-11",
   "estado": "proyecto-en-curso",
   "archivos": [
     {
@@ -10,13 +10,13 @@
     },
     {
       "archivo": "CHANGELOG.md",
-      "bytes": 4182,
-      "sha256": "6d09a4e2de22c659dbf63918cca85238df2c29ba821f38a4585204e6d6eec76a"
+      "bytes": 5534,
+      "sha256": "a5dffdc15960d924b8d69da6f1b586662b2a2ad0fac2a6a44ea86d25e5dfb577"
     },
     {
       "archivo": "CITATION.cff",
       "bytes": 728,
-      "sha256": "2957cb98daa0e44023f2430e5f298543d4940d99cab9bc3e23ef420e0ef75ead"
+      "sha256": "850ec29f05c29a4c6c1ca79ef22f06df8899270d7d484fc72bdee9ad1fd79558"
     },
     {
       "archivo": "DERECHOS.md",
@@ -30,23 +30,23 @@
     },
     {
       "archivo": "README.md",
-      "bytes": 10399,
-      "sha256": "d8e231bfc06feca55cc61bf96b105f577a6979a8db66bffe2a79dbc7b037b849"
+      "bytes": 10552,
+      "sha256": "d32f02080ac2b36811ad992bf5e9b0f3359d8c6605079654ddfc71eef4c0a41f"
     },
     {
       "archivo": "docs/BITACORA.md",
-      "bytes": 18640,
-      "sha256": "b1a239cfa739a3107080af877e7763797802feab71b4f6806fb4b75c32e2eba8"
+      "bytes": 19990,
+      "sha256": "41b700f6599ffa47280916d1eb1c1e4a39351d5fc77b0d21a425ba58e2d3c5b4"
     },
     {
       "archivo": "docs/CATALOGO.json",
-      "bytes": 8559,
-      "sha256": "06bc3b35c28bec6b18e4fdab2c0cc463d99f6b414ddd3d2dd640e0601c749cd2"
+      "bytes": 13383,
+      "sha256": "278f208f20667f0c074927a28d355b1c8b0e5a2b47113ab76923a13eedb49288"
     },
     {
       "archivo": "docs/CATALOGO.md",
-      "bytes": 4201,
-      "sha256": "3327a0b21301f2827d6b73faa3dadf27cb4e4ad1d4ebae875dc46fa9bda02e64"
+      "bytes": 6853,
+      "sha256": "385a9467bec8c69fb425dd9be8425b33202b8282853704d36fde9d519fa31e81"
     },
     {
       "archivo": "docs/INVESTIGACION.md",
